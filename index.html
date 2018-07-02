@@ -1,0 +1,2180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>jQueryMobile</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
+    <link rel="stylesheet" href="css/skyd.css">
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/jquery.mobile-1.4.5.js"></script>
+    <style>
+        #pageone{background: #dddddd;}
+    </style>
+</head>
+<body>
+    <div id="pageone" data-theme="n" data-role="page">
+        <div data-role="header">
+            <a href="#pageone">首页</a>
+            <h1>我的主页</h1>
+            <a href="#" data-icon="search">搜索</a>
+        </div>
+        <div data-role="content">
+            <div data-role="collapsible">
+                <h3>起飞前留点啥呗</h3>
+                <label for="flay_ready"></label>
+                <textarea name="flay_ready" id="flay_ready" cols="30" rows="10"></textarea>
+            </div>
+            <div style="text-align: center;">
+                <h1>ACTION</h1>
+            </div>
+            <form action="#" method="get" style="text-align: center;">
+                <label for="fname" class="ui-hidden-accessible"></label>
+                你瞅啥？
+                <input id="fname" type="text">
+                <label for="fdoes">再瞅一个试试？</label>
+                <input id="fdoes" type="text">
+                <label for="datee">啥会儿能飞呢？</label>
+                <input type="date" id="datee">
+                <label for="info">给自己打点气</label>
+                <textarea name="addinfo" id="info"></textarea>
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                    <legend>你喜欢哪种？</legend>
+                    <label for="sex1">man</label>
+                    <input type="radio" id="sex1" name="gender">
+                    <label for="sex2">women</label>
+                    <input type="radio" id="sex2" name="gender">
+                </fieldset>
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                    <legend>喜欢谁呢？</legend>
+                    <label for="mm">夷光</label>
+                    <input type="checkbox" id="mm" name="mmandgg">
+                    <label for="mm1">王嫱</label>
+                    <input type="checkbox" id="mm1" name="mmandgg">
+                    <label for="gg">童贯</label>
+                    <input type="checkbox" id="gg" name="mmandgg">
+                    <label for="gg1">高长恭</label>
+                    <input type="checkbox" id="gg1" name="mmandgg">
+                    <label for="gg2">潘岳</label>
+                    <input type="checkbox" id="gg2" name="mmandgg">
+                </fieldset>
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup" data-type="horizontal">
+                        <h4>选择起飞时间</h4>
+                        <label for="dayy">选择日期</label>
+                        <select name="day" id="dayy">
+                            <optgroup label="weeksdays">
+                                <option value="mon">星期一</option>
+                                <option value="tue">星期二</option>
+                                <option value="wed">星期三</option>
+                                <option value="sta">星期四</option>
+                                <option value="wen">星期五</option>
+                            </optgroup>
+                            <optgroup label="weekends">
+                                <option value="sat">星期六</option>
+                                <option value="sun">星期日</option>
+                            </optgroup>
+                        </select>
+                        <label for="timee">几点</label>
+                        <select name="time" id="timee" data-native-menu="false" multiple>
+                            <option value="1">一点</option>
+                            <option value="2">二点</option>
+                            <option value="3">三点</option>
+                            <option value="4">四点</option>
+                            <option value="5">五点</option>
+                            <option value="6">六点</option>
+                            <option value="7">七点</option>
+                            <option value="8">八点</option>
+                            <option value="9">九点</option>
+                            <option value="10">十点</option>
+                            <option value="11">十一点</option>
+                            <option value="12">十二</option>
+                            <option value="13">十三</option>
+                            <option value="14">十四</option>
+                            <option value="15">十五</option>
+                            <option value="16">十六</option>
+                            <option value="17">十七</option>
+                            <option value="18">十八</option>
+                            <option value="19">十九</option>
+                            <option value="20">二十</option>
+                            <option value="21">二十一</option>
+                            <option value="22">二十二</option>
+                            <option value="23">二十三</option>
+                            <option value="24">二十四</option>
+                        </select>
+                    </fieldset>
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="rangee">从0-100选一个表示你容颜的数字：</label>
+                    <input type="range" name="points" id="rangee" min="0" max="100" value="50" data-highlight="true">
+                    <label for="switchh">你觉得自己长得帅吗？</label>
+                    <select name="switch" id="switchh" data-role="slider">
+                        <option value="on">帅</option>
+                        <option value="off">相当帅</option>
+                    </select>
+                </div>
+                <a href="#pagetwo" data-role="button" data-transition="pop">起飞</a>
+            </form>
+        </div>
+        <div data-role="footer" data-position="fixed" class="ui-btn">
+            <div data-role="controlgroup" data-type="horizontal" data-shadow="true">
+                <a href="#" data-role="button">Stariler</a>
+                <a href="#" data-role="button">Edwin</a>
+                <a href="#" data-role="button">Honer</a>
+                <a href="#" data-role="button">Savage</a>
+                <a href="#" data-role="button">Simeth</a>
+            </div>
+        </div>
+    </div>
+    <div id="pagetwo" data-role="page" data-theme="p">
+        <div data-role="header">
+            <a href="#pageone" data-transition="pop" data-direction="reverse">返回首页</a>
+            <h2>关于星仔</h2>
+            <a href="#pagethree" data-role="search">继续飞啊</a>
+        </div>
+        <div data-role="content">
+            <div data-role="collapsible">
+                <h3>MyMassage</h3>
+                <ul data-role="listview"  data-icon="star">
+                    <li><a href="#pagetwo_01" data-rel="dialog">Name:Edwin</a></li>
+                    <li><a href="#pagetwo_02" data-rel="dialog">Age:26</a></li>
+                    <li><a href="#pagetwo_03" data-rel="dialog">Sex:men</a></li>
+                    <li><a href="#pagetwo_04" data-rel="dialog">Data:1991/1/12</a></li>
+                </ul>
+                <h3>MyHobby</h3>
+                <ul data-role="listview" data-icon="check">
+                    <li><a href="#">Sport</a></li>
+                    <li><a href="#">Book</a></li>
+                    <li><a href="#">Games</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>几件趣事</h2>
+                <ul data-role="listview" data-inset="true" data-icon="info">
+                    <li><a href="#">
+                        <img src="img/caideng.jpg">
+                        <h3>仁和公园元宵灯展</h3>
+                        <p>2018年初于仁和公园拍，灯火迷心情迷意...</p>
+                    </a></li>
+                    <li><a href="#">
+                        <img src="img/xuejing.jpg">
+                        <h3>南山北</h3>
+                        <p>2018年初于我家二楼拍，南山北，雪凄美...</p>
+                    </a></li>
+                    <li>
+                        <a href="#">
+                            <img src="img/beijingxi.jpg">
+                            <h3>北京西站</h3>
+                            <p>2017年底于北京西拍，路漫漫心乱乱...</p>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                        <img src="img/qiutianshu.jpg">
+                        <h3>秋果高挂</h3>
+                        <p>2017年秋于叶家拍，秋实喜人秋意凉...</p>
+                    </a></li>
+                    <li><a href="#">
+                        <img src="img/qinhuaihe.jpg">
+                        <h3>秦淮夜景</h3>
+                        <p>2017年初于秦淮河拍，灯火辉煌独自彷徨...</p>
+                    </a></li>
+                </ul>
+            </div>
+            <h2>随笔：</h2>
+            <div data-role="collapsible">
+                <h3>逗比日常</h3>
+                <ul data-role="listview">
+                    <li><a href="#text_01" data-transition="slide">你长着一副好脸...</a></li>
+                    <li><a href="#text_02" data-transition="slide">思想是一定要有滴...</a></li>
+                    <li><a href="#text_03" data-transition="slide">什么叫悲剧...</a></li>
+                    <li><a href="#text_04" data-transition="slide">真理就是这样...</a></li>
+                    <li><a href="#text_05" data-transition="slide">好吃好喝好玩好乐...</a></li>
+                    <li><a href="#text_06" data-transition="slide">这选择题，你看着办吧...</a></li>
+                    <li><a href="#text_07" data-transition="slide">史上最强大的男人...</a></li>
+                </ul>
+            </div>
+            <div data-role="collapsible">
+                <h3>优雅或庸俗</h3>
+                <ul data-role="listview">
+                    <li><a href="#text_001" data-transition="flip">乱乱的，撞到了心房</a></li>
+                    <li><a href="#text_002" data-transition="flip">21种爱</a></li>
+                    <li><a href="#text_003" data-transition="flip">感情最好不要顺其自然</a></li>
+                    <li><a href="#text_004" data-transition="flip">《飞鸟集》（中英双语）</a></li>
+                    <li><a href="#text_005" data-transition="flip">走着走着就散了，回忆也淡了</a></li>
+                </ul>
+            </div>
+            <div data-role="collapsible">
+                <h3>上面两个的合集</h3>
+                <ul data-role="listview">
+                    <li><a href="#text_01" data-transition="slide">你长着一副好脸...</a></li>
+                    <li><a href="#text_02" data-transition="slide">思想是一定要有滴...</a></li>
+                    <li><a href="#text_03" data-transition="slide">什么叫悲剧...</a></li>
+                    <li><a href="#text_04" data-transition="slide">真理就是这样...</a></li>
+                    <li><a href="#text_05" data-transition="slide">好吃好喝好玩好乐...</a></li>
+                    <li><a href="#text_06" data-transition="slide">这选择题，你看着办吧...</a></li>
+                    <li><a href="#text_07" data-transition="slide">史上最强大的男人...</a></li>
+                    <li><a href="#text_001" data-transition="slide">乱乱的，撞到了心房</a></li>
+                    <li><a href="#text_002" data-transition="slide">21种爱</a></li>
+                    <li><a href="#text_003" data-transition="slide">感情最好不要顺其自然</a></li>
+                    <li><a href="#text_0001" data-transition="flow">《飞鸟集》（中英双语）</a></li>
+                </ul>
+            </div>
+            <div></div>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#QQ" data-rel="dialog">QQ号码</a></li>
+                    <li><a href="#Wechat">微信号</a></li>
+                    <li><a href="#PhoneNumber">手机号</a></li>
+                    <li><a href="#Email">邮箱</a></li>
+                    <li><a href="#Other">其他</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="pagetwo_01" data-theme="f" data-role="page">
+            <div data-role="header" data-theme="g"><h1>其他称呼</h1></div>
+            <div data-role="content">
+                <div>
+                    <!--<h2>中文名</h2>-->
+                    <ul data-role="listview" data-inset="true">
+                        <li><a href="#" data-role="button" data-theme="z">中文名：甄兴兴</a></li>
+                        <li><a href="#" data-role="button" data-theme="z">外号一：星仔</a></li>
+                        <li><a href="#" data-role="button" data-theme="z">外号二：小星星</a></li>
+                    </ul>
+                    <div data-role="collapsible">
+                        <h2>其他爱称</h2>
+                        <ul data-role="listview" data-inset="true">
+                            <li><a href="#" data-role="button" data-theme="z">大傻</a></li>
+                            <li><a href="#" data-role="button" data-theme="z">懒货</a></li>
+                            <li><a href="#" data-role="button" data-theme="z">猪星</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div data-role="footer" data-theme="g"><h2><a href="#pagetwo">返回</a></h2></div>
+        </div>
+    <div id="pagetwo_02" data-theme="f" data-role="page">
+            <div data-role="header" data-theme="g"><h1>年龄不详</h1></div>
+            <div data-role="content">
+                <div>
+                    <ul data-role="listview" data-inset="true">
+                        <li><a href="#" data-role="button" data-theme="z">可能24</a></li>
+                        <li><a href="#" data-role="button" data-theme="z">或者25</a></li>
+                        <li><a href="#" data-role="button" data-theme="z">不然27</a></li>
+                        <li><a href="#" data-role="button" data-theme="z">甚至28</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div data-role="footer" data-theme="g"><h2><a href="#pagetwo">返回</a></h2></div>
+        </div>
+    <div id="pagetwo_03" data-theme="f" data-role="page">
+            <div data-role="header" data-theme="g"><h1>性别妥妥的</h1></div>
+            <div data-role="content">
+                <div data-role="navbar">
+                    <ul data-role="listview" data-inset="true">
+                        <li><a href="#" data-icon="forward" data-theme="z">男人</a></li>
+                        <li><a href="#" data-icon="check" data-theme="z">雄性</a></li>
+                        <li><a href="#" data-icon="check" data-theme="z">斯巴达</a></li>
+                        <li><a href="#" data-icon="check" data-theme="z">爷们</a></li>
+                        <li><a href="#" data-icon="back" data-theme="z">汉子</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div data-role="footer" data-theme="g"><h2><a href="#pagetwo">返回</a></h2></div>
+        </div>
+    <div id="pagetwo_04" data-theme="f" data-role="page">
+            <div data-role="header" data-theme="g"><h1>真实生日</h1></div>
+            <div data-role="content">
+                <div data-role="collapsible">
+                    <h2>不告诉你</h2>
+                    <ul data-role="listview" data-inset="true">
+                        <li>
+                            <div data-role="collapsible">
+                                <h2>就不告诉你</h2>
+                                <div data-role="collapsible">
+                                    <h3>你咋这么执着捏？</h3>
+                                    <div data-role="collapsible">
+                                        <h3>怕了你了</h3>
+                                        <a href="#" data-icon="forward" data-role="button" data-theme="z">1992.8.3</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+            <div data-role="footer" data-theme="g"><h2><a href="#pagetwo">返回</a></h2></div>
+        </div>
+    <div id="text_01" data-theme="j" data-role="page">
+        <div data-role="header"><a href="#pagetwo">你长着一副好脸</a><h2>随笔</h2><a href="#">搜索</a></div>
+        <div data-role="content">
+            <h3>你长着一副好脸</h3>
+            你长着一副出生名门正派一心攀龙附凤讨好师傅师娘无奈小师妹被魔教公子勾引以身相许导致性情大变屠戮同门师兄弟被师傅清理门户一掌劈死前恍然大悟时的脸。
+        </div>
+        <div data-role="footer" data-position="fixed" class="ui-btn"><a href="#pagetwo" data-role="button" data-transition="slide" data-direction="reverse">返回</a></div>
+    </div>
+    <div id="text_02" data-theme="j" data-role="page">
+        <div data-role="header"><a href="#pagetwo">返回</a><h2>一定要有思想</h2><a href="#">搜索</a></div>
+        <div data-role="content">
+            <h3>人一定要有思想，不然和咸鱼有什么区别</h3>
+            思想就像内裤，要有，但是不能逢人就证明你有！不然就是装逼！
+        </div>
+        <div data-role="footer" data-position="fixed" class="ui-btn"><a href="#pagetwo" data-role="button" data-transition="slide" data-direction="reverse">返回</a></div>
+    </div>
+    <div id="text_03" data-theme="j" data-role="page">
+        <div data-role="header"><a href="#pagetwo">返回</a><h2>什么是悲剧</h2><a href="#">搜索</a></div>
+        <div data-role="content">
+            <h3>悲剧中的战斗机</h3>
+            孩子生了，养到四五岁，老婆闹离婚，离了，孩子判给了自己结果发现孩子不是亲生的然后初恋带着四胞胎找到了你说四个孩子都是你的刚巧你被吵了忧郁股票被套房子遇到非法拆迁自己还得了痔疮，这才叫悲剧！
+        </div>
+        <div data-role="footer" data-position="fixed" class="ui-btn"><a href="#pagetwo" data-role="button" data-transition="slide" data-direction="reverse">返回</a></div>
+
+    </div>
+    <div id="text_04" data-theme="j" data-role="page">
+        <div data-role="header"><a href="#pagetwo">返回</a><h2>现实中的真理</h2><a href="#">搜索</a></div>
+        <div data-role="content">
+            <h3>好像是真理哦</h3>
+            <p>1、在非洲，毎60秒，就有一分钟过去。
+                <br>
+                2、凡是每天憋尿过多的人，有高几率100年内死去！
+                <br>
+                3、据研究，毎呼吸60秒，就减少1分钟寿命。
+                <br>
+                4、当你吃下了20碗米饭，换算下来竟然相当于摄入了20碗米饭的热量。
+                <br>
+                5、谁能想到，这名16岁少女，4年前只是一位12岁少女。
+                <br>
+                6、中国人在睡觉时，大多数美国人在工作。
+                <br>
+                7、当蝴蝶在南半球拍了两下翅膀，他就会稍微飞高一些。
+                <br>
+                8、据统计：未婚生育的人中有大多数为女性。
+                <br>
+                9、如果你每天省下来一包烟钱， 10天后你就能买10包烟。
+                <br>
+                10、当你左脸被打，你的左脸就会痛。
+                <br>
+                11、人被杀，就会死。
+                <br>
+                12、中国教英语方式有极大错误，在美国就连小学生都能说一口流利的英语。</p>
+        </div>
+        <div data-role="footer" data-position="fixed" class="ui-btn"><a href="#pagetwo" data-role="button" data-transition="slide" data-direction="reverse">返回</a></div>
+
+    </div>
+    <div id="text_05" data-theme="j" data-role="page">
+        <div data-role="header"><a href="#pagetwo">返回</a><h2>吃好喝好玩好乐好了您慢走嘞</h2><a href="#">搜索</a></div>
+        <div data-role="content">
+           <h3>吃好喝好玩好乐好了您走好嘞~</h3>
+            <div>
+                好吃不过饺子，好玩不过嫂子，吃嫂子包的饺子，玩包饺子的嫂子，吃最烫的饺子，操最浪的嫂子， 。。
+                <br><br>
+                好喝不过拿铁， 好玩不过表姐，喝表姐买的拿铁，玩买拿铁的表姐，喝最香的拿铁，操最骚的表姐， 。。。。。
+                <br><br>
+                好吃不过海味，好玩不过表妹， 吃表妹做的海味，玩做海味的表妹，吃最美的海味，操最美的表妹……
+                <br><br>
+                好躺不过草席，好睡不过小姨，带着小姨买草席，买完草席睡小姨，躺着最凉的草席，睡着最 骚 的小姨，躺着小姨买的草席，睡着买草席的小姨，小姨买的草席最凉，草席上的小姨最强……
+                <br><br>
+                好吃不过喜之郎。好玩不过丈母娘。吃丈母娘买的喜之郎。玩买喜之郎的丈母娘。吃最Q的喜之郎，玩最骚的丈母娘。。。。。。
+                <br><br>
+                好喝不过健力宝，好玩不过他二嫂，喝着他二嫂买的健力宝，玩着买健力宝的他二嫂，喝最有气的健力宝，玩最澎湃的他二嫂～
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" class="ui-btn"><a href="#pagetwo" data-role="button" data-transition="slide" data-direction="reverse">返回</a></div>
+
+    </div>
+    <div id="text_06" data-theme="j" data-role="page">
+        <div data-role="header"><a href="#pagetwo">返回</a><h2>世上最难选择题</h2><a href="#">搜索</a></div>
+        <div data-role="content">
+            <h3>史上最难选择题:</h3>
+            <div>
+                假如你老婆怀了龙凤胎但是难产了，医生问你保大还是保小。保大人的话两个孩子会死，保孩子的话女孩肯定能活但是男孩不一定，要是保男孩的话母女两都会死，这个时候你妈要跳河逼你保男孩，你要怎么选？
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" class="ui-btn"><a href="#pagetwo" data-role="button" data-transition="slide" data-direction="reverse">返回</a></div>
+
+    </div>
+    <div id="text_07" data-theme="j" data-role="page">
+        <div data-role="header"><a href="#pagetwo">返回</a><h2>史上最强的男人</h2><a href="#">搜索</a></div>
+        <div data-role="content">
+            <h3>史上最强的男人！！！</h3>
+            <div>
+                我这辈子只佩服过三个男人！
+                <br><hr>
+                一个是董永，一个是许仙，一个是宁采臣！！！！
+                <br><hr>
+                一个日了仙、一个日了妖、还有一个TMD连鬼都不放过！
+                <br><hr>
+                我一直以为我永远只佩服他们三儿，直到看了花千骨后我才明白前者都TM弱爆了，落十一，才是真正的男人，日毛毛虫！
+                </div>
+        </div>
+        <div data-role="footer" data-position="fixed" class="ui-btn"><a href="#pagetwo" data-role="button" data-transition="slide" data-direction="reverse">返回</a></div>
+
+    </div>
+    <div id="text_001" data-theme="m" data-role="page">
+        <div data-role="header"><a href="#pagetwo">返回</a><h2>乱乱的，撞进了心里</h2><a href="#">搜索</a></div>
+        <div data-role="content">
+            <h3>乱乱的，撞进了心里</h3>
+            <div>
+                长颈鹿的脖子那么长,哽咽的时候是不是很难受,章鱼有三颗心脏,心痛的时候是不是要疼上三倍。
+                <br><br>
+                我和你同桌六年说对你没感觉没感情那真的都是我的一面之词.
+                <br>
+                我知道啊，你并不爱我，，
+                <br>
+                眼泪你别调皮了
+                <br><br>
+                吃货最怕做饿梦！
+                <br><br>
+                想起某些过往会不禁地笑，想到某些片段会隐隐地痛。幸福就是这样，痛并快乐着。
+                <br>
+                放心大步走吧我不追了 我真的很累
+                <br><br>
+                你有过那种忽冷忽热就像把你从沸腾的水中扔进冰块的钻心的疼么
+                <br><br>
+                幽兰绽空谷，雪莲傲山巅。狗尾巴茁到处都是，却没有人把它插在花瓶里。
+                <br><br>
+                和 学霸坐同桌 学渣永远都不怕~~~
+                <br><br>
+                皇帝死了叫驾崩，平民死了叫去世，负心汉死了叫哦耶
+                <br><br>
+                善良过了头，就成了软弱；专横过了头，就成了霸道；做事过了头，就走上绝路。
+                <br>
+                他说，让我离开。
+                <br>
+                被万箭穿心后还装笑的感觉就像被迫吞下一块肥皂后还要装出吃了一块水果糖的感觉说味道真好，
+                <br><br>
+                我们常用最幼稚的方式威胁爱自己的人
+                <br>
+                那只是昨夜的一场梦而已。
+                <br><br>
+                为什么什么都要瞒着我
+                <br><br>
+                【 雨水一点两点滴滴纪念】
+                <br>
+                你知道心慢慢变凉的感觉吗
+                <br><br>
+                凉心: - 敢在学校玩大冒险的大多都有爱人
+                <br><br>
+                我在慢慢消化曾经对你爱的积淀我会祭奠我们俩逝去的爱情.
+                <br>
+                时光总是把一个不可或缺的人变得可有可无。
+                <br>
+                [ 你的一句话可以让我感动也会让我心痛 ]
+                <br><br>
+                今夜走在华灯下
+                <br>
+                经常会莫名其妙的悲伤的孩纸举个爪
+                <br><br>
+                如果我的玩笑话不小心刺痛了你 ，对不起， 我以为我们真的很熟。
+                <br><br>
+                女汉子会有一群兄弟陪着他，萌妹子会有一群男朋友陪着她
+                <br>
+                我爱的人他姓曾i
+                <br><br>
+                噩梦就是饿醒的梦！
+                <br><br>
+                我妈说我是神经病，我说：“是的，你还不是神经病她妈啊！”我妈顿时无语了！！
+                <br><br>
+                夜猫子对么你别熬夜了对身体不好虽然我只是个陌生人
+                <br><br>
+                英语不行的男生前途无量 数学不好的姑娘光芒万丈
+                <br><br>
+                有多少人跟我一样，每发一句语音都会听听自己的声音
+                <br><br>
+                你要做深陷泥潭却仍无一丝慌乱的王者
+                <br><br>
+                我一直在改变，因为我想让你后悔当初没有珍惜我。
+                <br><br>
+                ——青春是该付出在一张试卷上，但也不全是在那张试卷上
+                <br><br>
+                有些事情还没来得及解释 就被判了死刑。
+                <br><br>
+                他在空间上说只有在个性网才能畅所欲言 我来这里只是为了找他
+                <br><br>
+                不知从什么时候开始，每当对着镜子，看着自己现在的模样，眼眶情不自禁就红了。呵呵
+                <br><br>
+                想为你点一盏灯，在没人陪伴的黑夜里轻轻地安慰。当星星亮了，你睡着了，它长舒了一口气，然后悄悄熄灭了。
+                <br><br>
+                "你爱我吗"”我爱你“”以后不要再发晚安“，你对我真好，呵呵
+                <br><br>
+                你在哪里,可不可以让我早些遇见你.
+                <br><br>　　
+                　“你喜欢一个人会怎么样” “看他发的说说就像在做阅读理解” 　　　　　　　　　　　　　　　　　　<br><br>
+                你认真的时候 大多数人以为你在开玩笑
+                <br><br>
+                姑娘抬头挺胸大步走 管你身后几条狗
+                <br><br>
+                瞅你们一个个的,干的那些缺德事儿,卧槽尼玛的匕.
+                <br><br>
+                少了联系就变淡的感情老子不稀罕
+                <br><br>
+                爱在每一天!
+                <br>
+                一样卑微的想要靠近你
+                <br><br>
+                说星星很漂亮的人一定没见过你的眼睛 说太阳很温暖的人一定没见过你笑的样子
+                <br><br>
+                世界那么乱、装纯给谁看？
+                <br><br>
+                [滚开，你面积太大了，挡我信号了]
+                <br><br>
+                我不喜欢安于现状的生活 我要我自己的未来
+                <br><br>
+                “姑娘他都不爱你你还那么执着为什么啊”“因为我心里除了他就没别人了”
+                <br><br>
+                既然你都找到合适的了，我也不想充当小三的角色 ，祝你幸福 。
+                <br><br>
+                其实时间过得挺快的，看你又换女朋友了，
+                <br><br>
+                只爱我一个人好不好？
+                <br><br>
+                倒霉的,你们还组团的,拉拢合伙的,卧槽尼玛的匕,你们还是损到家了呢?哎哟呵。
+                <br><br>
+                喜欢一个人，喜欢到几乎看不见希望的时候，只能靠着一些给予自己的暗示，来证明自己还在继续坚持着.
+                <br><br>
+                我不是没有眼泪，只是不敢让它流出来.
+                <br>
+                要是她不回来了你怎么办
+                <br><br>
+                每个女孩都喜欢在十八岁那天有人能送双高跟鞋给自己 .
+                <br><br>
+                旧瘾： [ 如果我突然在人群中很疯或者沉默,那时一定很难过.]
+                <br><br>
+                在个性网上最开心的事无非就是遇到了知己，有共同语言。但为什么还要弃我？这就是我一生的宿命吗？没人爱？
+                <br><br>
+                别找我　别问我　伤好了我会自己再回来
+                <br><br>
+                淋漓、[那个名叫习惯的人真强大]
+                <br><br>
+                你的一个眼神一个微笑一个动作对我来说都是春药
+                <br><br>
+                无论你昨晚经历了怎样的泣不成声早上醒来这个城市依旧车水马龙没人管你有什么情绪,
+                <br><br>
+                不要去打扰一个不愿意理你的人、因为在他心里你不是他最重要的人_
+                <br><br>
+                [ 终于发现了一个百度不知道的问题：你知道我什么时候来大姨妈吗 ].
+                <br><br>
+                喜欢的事自然可以坚持，不喜欢的怎么也长久不了
+                <br><br>
+                我们不能一起出生，但是我们可以一起祸害苍生！~~
+                <br><br>
+                大概她喜欢久伴而我姓李
+                <br><br>
+                对你发脾气 不是因为我讨厌你 而是因为你是我最信得过的人 最放心的人 最亲的人
+                <br><br>
+                女神都得洗澡澡 。而我还得做死屌
+                <br><br>
+                有时不能说男生太娘们，只能说姑娘你太爷们了！
+                <br><br>
+                泰语中傻逼是老公的意思...
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" class="ui-btn"><a href="#pagetwo" data-role="button" data-transition="flip" data-direction="reverse">返回</a></div>
+
+    </div>
+    <div id="text_002" data-theme="n" data-role="page">
+        <div data-role="header"><a href="#pagetwo">返回</a><h2>21种方式说爱你</h2><a href="#">搜索</a></div>
+        <div data-role="content">
+            <h3>21种方式说爱你</h3>
+           <div>
+               执子之手，与子偕老。
+               <br><hr>
+               <br><hr>Koi No Yokan日语
+               <br><hr>Mo Chuisle Mo Chroi 盖尔语
+               <br><hr>Mamihlapinatapei 亚格汉语
+               <br><hr> Retrouvailles 法语
+               <br><hr> Iktsuarok 因纽特语
+               <br><hr>    Oodal 泰米尔语
+               <br><hr>   Geborgenheit 德语
+               <br><hr>   Forelsket 丹麦语
+               <br><hr>  Viraha 北印度语
+               <br><hr>   Dor 罗马尼亚语
+               <br><hr>   Flechazo 西班牙语
+               <br><hr>  Kilig 塔加拉族语
+               <br><hr>   Aay'han 星球大战
+               <br><hr>    Ya'aburnee 阿拉伯语
+               <br><hr>  Onsra 波洛语
+               <br><hr>     Cwtch 威尔士语
+               <br><hr>     Odnoliub 俄语
+               <br><hr>    Merak 塞尔威亚语
+               <br><hr>   Manabamate 拉帕努伊语
+               <br><hr>  Firgun 希伯来语
+           </div>
+        </div>
+        <div data-role="footer" data-position="fixed" class="ui-btn"><a href="#pagetwo" data-role="button" data-transition="flip" data-direction="reverse">返回</a></div>
+
+    </div>
+    <div id="text_003" data-theme="o" data-role="page">
+        <div data-role="header"><a href="#pagetwo">返回</a><h2>感情最好不要顺其自然</h2><a href="#">搜索</a></div>
+        <div data-role="content">
+            <h3>感情最好不要顺其自然</h3>
+            <div>
+                【几米说】感情最好不要顺其自然！
+                <br><br>
+                我们总是以为，我们会找到一个自己很爱很爱的人。可是当我们回首，才发觉自己曾经多么天真。假如从来没有开始，你怎么知道自己会不会很爱很爱那个人呢？
+                <br><br>
+                其实，很爱很爱的感觉，是要在一起经历了许多事情之後才会发现的。
+                <br><br>
+                茫茫人海可以找到一个心爱的人，这是多么大的福气，或许没有你想象那么好，应该也不会糟糕到哪里，所以要知福惜福好好珍惜，多说关怀话，少说责备话。
+                <br><br>
+                如果你懂得珍惜，你会发现你获得的越来越多，如果你一昧追求，你会发现你失去的越来越快。
+                <br><br>
+                爱情合理就好，不要委屈将就，不要相信完美的爱情，其实彼此有缺点，有一种纯朴的可爱就足够了。
+                <br><br>
+                我们拥有一只鞋子的时候，才会明白失去另一只鞋子的滋味，消逝的恋情总是刻骨铭心的，珍惜或放下，都是生命中必经的过程。
+                <br><br>
+                相爱的时候需要真诚，争执的时候需要沟通，生气的时候需要冷静，愉快的时候需要分享，指责的时候需要谅解，过日子的时候需要包容。
+                <br><br>
+                一个人的生命里，擦肩而过的人有千千万万，有几个是知音？有几个是深爱自己的人？爱情再坚固，也无法承受忙碌的侵蚀，你忙得天荒地乱，你忙得忘记关心，你忙得身心疲惫，你忙得无所适从，但是 —— 爱情不能等你有空才珍惜。
+                <br><br>
+                女人不要说，你没有遇到你想遇到的人，你想嫁的人，如果你的容貌身材姿色收入家庭条件出生没有发生改变的话，按照常理和规律，你就应该和现在的人在一起。
+                <br><br>
+                男人不要说，等我有了钱，等我成功了，等我有了权，如果你的相貌身材收入家庭姿色没有发生根本转变的话按照常理和规律，你就应该和现在的人在一起。你现在能遇到的，能交往的，就是你可以找到的人。
+                <br><br>
+                所以，你不要想以后怎样，以后是以后的事情。人生不过百年，幕起幕落而已。
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" class="ui-btn"><a href="#pagetwo" data-role="button" data-transition="flip" data-direction="reverse">返回</a></div>
+
+    </div>
+    <div id="text_004" data-theme="r" data-role="page">
+        <div data-role="header"><a href="#pagetwo">返回</a><h2>《飞鸟集》</h2><a href="#">搜索</a></div>
+        <div data-role="content">
+            <h3>《飞鸟集》（中英双语）</h3>
+            <div>
+                飞鸟集(中英双语)
+                <br><br>
+                                                １<br>
+                夏天的飞鸟，飞到我的窗前唱歌，又飞去了。　　<br>
+                秋天的黄叶，它们没有什么可唱，只叹息一声，飞落在那里。<br>
+                Stray birds of summer come to my window to sing and fly away.<br>
+                And yellow leaves of autumn, which have no songs, flutter and fall
+                there with a sign.
+                <br><br>
+  ２ <br>
+                世界上的一队小小的漂泊者呀，请留下你们的足印在我的文字里。<br>
+                O Troupe of little vagrants of the world, leave your footprints in my words.
+                <br><br>
+３<br>
+世界对着它的爱人，把它浩翰的面具揭下了。<br>
+                它变小了，小如一首歌，小如一回永恒的接吻。<br>
+                The world puts off its mask of vastness to its lover.
+                It becomes small as one song, as one kiss of the eternal.
+                <br><br>
+                ４ <br>
+                是大地的泪点，使她的微笑保持着青春不谢。　<br>　　　　　　　　　　　
+                It is the tears of the earth that keep here smiles in bloom.
+                <br><br>
+                　　　　　　　　　　　　　　　５　　　　　　　　　　　　　　　　　　　
+                无垠的沙漠热烈追求一叶绿草的爱，她摇摇头笑着飞开了。 <br>　
+                The mighty desert is burning for the love of a bladeof grass who
+                shakes her head and laughs and flies away.
+                <br><br>
+                　　　　　　　　　　　　　　　６　　　　　　　　　　　　　　　　　　　
+                如果你因失去了太阳而流泪，那么你也将失去群星了。　　<br>　　　　　　
+                If you shed tears when you miss the sun, you also miss the stars.
+                <br><br>
+                　　　　　　　　　　　　　　　７　　　　　　　　　　　　　　　　　　　
+                跳舞着的流水呀，在你途中的泥沙，要求你的歌声，你的流动呢。你肯挟
+                瘸足的泥沙而俱下么？　　　　　<br>　　　　　　　　　　　　　　　　　　　　
+                The sands in your way beg for your song and your movement, dancing
+                water. Will you carry the burden of their lameness?
+                <br><br>
+                　　　　　　　　　　　　　　　８　　　　　　　　　　　　　　　　　　　
+                她的热切的脸，如夜雨似的，搅扰着我的梦魂。　<br>　　　　　　　　　　
+                Her wishful face haunts my dreams like the rain at night.
+                <br><br>
+                　　　　　　　　　　　　　　　９　　　　　　　　　　　　　　　　　　　
+                有一次，我们梦见大家都是不相识的。　<br>　　　　　　　　　　　　　　
+                我们醒了，却知道我们原是相亲相爱的。　<br>　　　　　　　　　　　　　
+                Once we dreamt that we were strangers.<br>
+                We wake up to find that we were dear to each other.
+                <br><br>
+                　　　　　　　　　　　　　　１０　　　　　　　　　　　　　　　　　　　
+                忧思在我的心里平静下去，正如暮色降临在寂静的山林中。<br>　　　　　　
+                Sorrow is hushed into peace in my heart like the evening among
+                the silent trees.
+                <br><br>
+                １１　　　　　　　　　　　　　　　　　　　
+
+                有些看不见的手，如懒懒的微（风思）的，正在我的心上奏着　　
+                潺（氵爰）的乐声。　　　　　　　　　<br>　　　　　　　　　
+                Some unseen fingers, like an idle breeze, are playing upon my heart
+                the music of the ripples.
+                <br><br>
+                　　　　　　　　　　　　　　１２　　　　　　　　　　　　　　　　　　　
+                “海水呀，你说的是什么？”　　　<br>　　　　　　　　　　　　　　　
+                　　　“是永恒的疑问。”　　　　　<br>　　　　　　　　　　　　　　　　　　
+                　　　“天空呀，你回答的话是什么？”<br>　　　　　　　　　　　　　　　　
+                “是永恒的沉默。”　　　　　　<br>　　　　　　　　　　　　　　　　　
+                What language is thine, O sea?<br>
+                The language of eternal question.<br>
+                What language is thy answer, O sky?<br>
+                The language of eternal silence.
+                <br><br>
+                　　　　　　　　　　　　　　１３　　　　　　　　　　　　　　　　　　　
+                静静地听，我的心呀，听那世界的低语，这是它对你求爱的表示呀。<br>　　
+                Listen, my heart, to the whispers of the world with which it makes
+                love to you.
+                <br><br>
+                　　　　　　　　　　　　　　１４　　　　　　　　　　　　　　　　　　　
+                创造的神秘，有如夜间的黑暗－－是伟大的。而知识的幻影却不过如晨间
+                之雾。　　　　　　　　　　　　　　　　　　　　　<br>　　　　　　　　　　　
+                The mystery of creation is like the darkness of night--it is great.<br>
+                Delusions of knowledge are like the fog of the morning.
+                <br><br>
+                　　　　　　　　　　　　　　１５　　　　　　　　　　　　　　　　　　　
+                不要因为峭壁是高的，便让你的爱情坐在峭壁上。 　<br>　　　　　　　　
+                Do not seat your love upon a precipice because it is high.
+                <br><br>
+                　　　　　　　　　　　　　　１６　　　　　　　　　　　　　　　　　　　
+                我今晨坐在窗前，世界如一个路人似的，停留了一会，向我点点头又走过
+                去了。　　　　　　　　　　　　　　　　　　　　　　　　<br>　　　　　　　　
+                I sit at my window this morning where the world like a passer-by stops
+                for a moment, nods to me and goes.
+                <br><br>
+                　　　　　　　　　　　　　　１７　　　　　　　　　　　　　　　　　　　
+                这些微（风思），是树叶的簌簌之声呀；它们在我的心里欢悦地微语着。<br>
+                There little thoughts are the rustle of leaves; they have their
+                whisper of joy in my mind.
+                <br><br>
+                　　　　　　　　　　　　　　１８　　　　　　　　　　　　　　　　　　　
+                你看不见你自己，你所看见的只是你的影子。　　　　<br>　　　　　　　　
+                What you are you do not see, what you see is your shadow.
+                <br><br>
+                　　　　　　　　　　　　　　１９　　　　　　　　　　　　　　　　　　　
+                神呀，我的那些愿望真是愚傻呀，它们杂在你的歌声中喧叫着呢。　<br>　　
+                让我只是静听着吧。　　　　　　　　　　　<br>　　　　　　　　　　　　
+                My wishes are fools, they shout across thy song, my Master.<br>
+                Let me but listen.
+                <br><br>
+                　　　　　　　　　　　　　　２０　　　　　　　　　　　　　　　　　　　
+                我不能选择那最好的。　　　　　<br>　　　　　　　　　　　　　　　　　
+                是那最好的选择我。　　　　<br>　　　　　　　　　　　　　　　　　　　
+                I cannot choose the best.<br>
+                The best chooses me.<br>
+                <br><br>
+                ２１　
+                那些把灯背在背上的人，把他们的影子投到了自己前面。　<br>　　　　　　
+                They throw their shadows before them who carry their lantern on
+                their back.
+                <br><br>
+                　　　　　　　　　　　　　　２２　　　　　　　　　　　　　　　　　　　
+                我的存在，对我是一个永久的神奇，这就是生活。　　<br>　　　　　　　　
+                That I exist is a perpetual surprise which is life.
+                <br><br>
+                　　　　　　　　　　　　　　２３　　　　　　　　　　　　　　　　　　　
+                “我们萧萧的树叶都有声响回答那风和雨。你是谁呢，那样的沉默着？”<br>
+                “我不过是一朵花。”　　　　　　　　　　　　　　　　　<br>　　　　　
+                We, the rustling leaves, have a voice that answers the storms,
+                but who are you so silent?"<br>
+                I am a mere flower.<br>
+
+                　　　　　　　　　　　　　　２４　　　　　　　　　　　　　　　　　　　
+                休息与工作的关系，正如眼睑与眼睛的关系。　　　　　　　　　　　　
+                Rest belongs to the work as the eyelids to the eyes.
+
+                　　　　　　　　　　　　　　２５　　　　　　　　　　　　　　　　　　　
+                人是一个初生的孩子，他的力量，就是生长的力量。 　　　　　　　　
+                Man is a born child, his power is the power of growth.
+
+                　　　　　　　　　　　　　　２６　　　　　　　　　　　　　　　　　　　
+                　神希望我们酬答他，在于他送给我们的花朵，而不在于太阳和土地。　　
+                God expects answers for the flowers he sends us, not for the sun
+                the earth.
+
+                　　　　　　　　　　　　　　２７　　　　　　　　　　　　　　　　　　　
+                光明如一个裸体的孩子，快快活活地在绿叶当中游戏，它不知道人是会欺
+                诈的。　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+                The light that plays, like a naked child, among the green leaves
+                happily knows not that man can lie.
+
+                　　　　　　　　　　　　　　２８　　　　　　　　　　　　　　　　　　　
+                啊，美呀，在爱中找你自己吧，不要到你镜子的谄谀去找寻。
+                O Beauty, find thyself in love, not in the flattery of thy mirror.
+
+                　　　　　　　　　　　　　　２９　　　　　　　　　　　　　　　　　　　
+                我的心把她的波浪在世界的海岸上冲激着，以热泪在上边写着她的题记：
+                “我爱你。”　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+                My heart beats her waves at the shore of the world and writes upon
+                it her signature in tears with the words, "I love thee."
+
+                　　　　　　　　　　　　　　３０　　　　　　　　　　　　　　　　　　　
+                “月儿呀，你在等候什么呢？”　　　　　　　　　　　　　　　　　　
+                “向我将让位给他的太阳致敬。”　　　　　　　　　　　　　　　　　
+                Moon, for what do you wait?
+                To salute the sun for whom I must make way.
+
+                ３１　　　　　　　　　　　　　　　　
+
+                绿树长到了我的窗前，仿佛是喑哑的大地发出的渴望的声音。
+                The trees come up to my window like the yearning voice of the dumb earth.
+
+                　　　　　　　　　　　　　　３２　　　　　　　　　　　　　　　　　　　
+                神自己的清晨，在他自己看来也是新奇的。　　　　　　　　　　　　　
+                His own mornings are new surprises to God.
+
+                　　　　　　　　　　　　　　３３　　　　　　　　　　　　　　　　　　　
+                生命从世界得到资产，爱情使它得到价值。　　　　　　　　　　　　　
+                Life finds its wealth by the claims of the world, and its worth
+                by the claims of love.
+
+                　　　　　　　　　　　　　　３４　　　　　　　　　　　　　　　　　　　
+                枯竭的河床，并不感谢它的过去。　　　　　　　　　　　　　　　　　
+                The dry river-bed finds no thanks for its past.
+
+                　　　　　　　　　　　　　　３５　　　　　　　　　　　　　　　　　　　
+                鸟儿愿为一朵云。　　　　　　　　　　　　　　　 　　　　　　　　
+                云儿愿为一只鸟。　　　　　　　　　　　　　　　　　　　　　　　　
+                The bird wishes it were a cloud.
+                The cloud wishes it were a bird.
+
+                　　　　　　　　　　　　　　３６　　　　　　　　　　　　　　　　　　　
+                　瀑布歌唱道：“我得到自由时便有了歌声了。”　　　　　　　　　　　
+                The waterfall sing, "I find my song, when I find my freedom."
+
+                　　　　　　　　　　　　　　３７　　　　　　　　　　　　　　　　　　　
+                我说不出这心为什么那样默默地颓丧着。　　　　　　　　　　　　　　
+                是为了它那不曾要求，不曾知道，不曾记得的小小的需要。　　　　　　
+                I cannot tell why this heart languishes in silence.
+                It is for small needs it never asks, or knows or remembers.
+
+                　　　　　　　　　　　　　　３８　　　　　　　　　　　　　　　　　　　
+                妇人，你在料理家务的时候，你的手足歌唱着，正如山间的溪水歌唱着在
+                小石中流过。　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+                Woman, when you move about in your household service your limbs sing
+                like a hill stream among its pebbles.
+
+                　　　　　　　　　　　　　　３９　　　　　　　　　　　　　　　　　　　
+                当太阳横过西方的海面时，对着东方留下他的最后的敬礼。　　　　　　
+                The sun goes to cross the Western sea, leaving its last salutation
+                to the East.
+
+                　　　　　　　　　　　　　　４０　　　　　　　　　　　　　　　　　　　
+                不要因为你自己没有胃口而去责备你的食物。　　　
+                Do not blame your food because you have no appetite.
+
+                ４１　　　　　　　　　　　　　　　　　　　　
+                群树如表示大地的愿望似的，踮起脚来向天空窥望。　　　　
+                The trees, like the longings of the earth, stand atiptoe to peep
+                at the heaven.
+
+                　　　　　　　　　　　　　　４２　　　　　　　　　　　　　　　　　　　　
+                你微微地笑着，不同我说什么话。而我觉得，为了这个，我已等待得久了。
+                You smiled and talked to me of nothing and I felt that for this
+                I had been waiting long.
+
+                　　　　　　　　　　　　　　４３　　　　　　　　　　　　　　　　　　　　
+                水里的游鱼是沉默的，陆地上的兽类是喧闹的，空中的飞鸟是歌唱着的。　
+                但是，人类却兼有海里的沉默，地上的喧闹与空中的音乐。　　　　　　　
+                The fish in the water is silent, the animal on the earth is noisy,
+                the bird in the air is singing.
+                But Man has in him the silence of the sea, the noise of the earth and
+                the music of the air.
+
+                　　　　　　　　　　　　　　４４　　　　　　　　　　　　　　　　　　　　
+                世界在踌躇之心的琴弦上跑过去，奏出忧郁的乐声。　　　　　　　　　　
+                The world rushes on over the strings of the lingering heart making
+                the music of sadness.
+
+                　　　　　　　　　　 　４５　　　　　　　　　　　　　　　　　　　　
+                他把他的刀剑当作他的上帝。　　　　　　　　　　　　　　　　　　　　
+                当他的刀剑胜利的时候他自己却失败了。　　　　　　　　　　　　　　　
+                He has made his weapons his gods.
+                When his weapons win he is defeated himself.
+
+                　　　　　　　　　　　　　　４６　　　　　　　　　　　　　　　　　　　　
+                　神从创造中找到他自己。　　　　　　　　　　　　　　　　　　　　　　
+                God finds himself by creating.
+
+                　　　　　　　　　　　　　　４７　　　　　　　　　　　　　　　　　　　　
+                阴影戴上她的面幕，秘密地，温顺地，用她的沉默的爱的脚步，跟在“光”
+                后边。　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+                Shadow, with her veil drawn, follows Light in secret meekness,
+                with her silent steps of love.
+                　　　　　　
+                ４８　　　　　　　　　　　　　　　　　　　　
+                群星不怕显得象萤火那样。　　　　　　　　　　　　　　　　　　　　　
+                The stars are not afraid to appear like fireflies.
+
+                　　　　　　　　　　　　　　４９　　　　　　　　　　　　　　　　　　　　
+                谢谢神，我不是一个权力的轮子，而是被压在这轮子下的活人之一。　　　
+                I thank thee that I am none of the wheels of power but I am one with
+                the living creatures that are crushed by it.
+
+                　　　　　　　　　　　　　　５０　　　　　　　　　　　　　　　　　　　　
+                心是尖锐的，不是宽博的，它执着在每一点上，却并不活动。　　　　　　
+                The mind, sharp but not broad, sticks at every point but does not move.
+
+                ５１　　　　　　　　　　　　　　　　　　　　
+
+                你的偶像委散在尘土中了，这可证明神的尘土比你的偶像还伟大。　　　　
+                You idol is shattered in the dust to prove that God's dust is greater
+                than your idol.
+
+                　　　　　　　　　　　　　　５２　　　　　　　　　　　　　　　　　　　　
+                人不能在他的历史中表现出他自己，他在历史中奋斗着露出头角。　　　　
+                Man does not reveal himself in his history, he struggles up through it.
+
+                　　　　　　　　　　　　　　５３　　　　　　　　　　　　　　　　　　　　
+                玻璃灯因为瓦灯叫它做表兄而责备瓦灯。但明月出来时，玻璃
+                灯却温和地微笑着，叫明月为－－－“我亲爱的，亲爱的姐姐。”　　　　
+                While the glass lamp rebukes the earthen for calling it cousin the
+                moon rises, and the glass lamp, with a bland smile, calls her,
+                ---My dear, dear sister.
+
+                　　　　　　　　　　　　　　５４　　　　　　　　　　　　　　　　　　　　
+                我们如海鸥之与波涛相遇似地，遇见了，走近了。海鸥飞去，波涛滚滚地流
+                开，我们也分别了。　　　　　　　　　　　　　　　　　　　　　　　　　　　
+                Like the meeting of the seagulls and the waves we meet and come near.
+                The seagulls fly off, the waves roll away and we depart.
+
+                　　　　　　　　　　 　５５　　　　　　　　　　　　　　　　　　　　
+                我的白昼已经完了，我象一只泊在海滩上的小船，谛听着晚潮跳舞的
+                乐声。　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+                My day is done, and I am like a boat drawn on the beach, listening to
+                the dance-music of the tide in the evening.
+
+                　　　　　　　　　　　　　　５６　　　　　　　　　　　　　　　　　　　　
+                　我们的生命是天赋的，我们惟有献出生命，才能得到生命。　　　　　　　
+                Life is given to us, we earn it by giving it.
+
+                　　　　　　　　　　　　　　５７　　　　　　　　　　　　　　　　　　　　
+                当我们是大为谦卑的时候，便是我们最接近伟大的时候。　　　　　　　　
+                We come nearest to the great when we are great in humility.
+
+                　　　　　　　　　　　　　　５８　　　　　　　　　　　　　　　　　　　　
+                麻雀看见孔雀负担着它的翎尾，替它担忧。　　　　　　　　　　　
+                The sparrow is sorry for the peacock at the burden of its tail.
+
+                　　　　　　　　　　　　　　５９　　　　　　　　　　　　　　　　　　　　
+                决不要害怕刹那－－永恒之声这样唱着。　　　　　　　　　　　　　　　
+                Never be afraid of the moments--thus sings the voice of the everlasting.
+
+                　　　　　　　　　　　　　　６０　　　　　　　　　　　　　　　　　　　　
+                风于无路之中寻求最短之路，又突然地在“无何有之国”终之了它的追求。
+                The hurricane seeks the shortest road by the no-road, and suddenly ends
+                its search in the Nowhere.
+
+                　６１　　　　　　　　　　　　　　　　　　　　
+
+                在我自己的杯中，饮了我的酒吧，朋友。　　　　　　　　　　　　　　　
+                一倒在别人的杯里，这酒的腾跳的泡沫便要消失了。　　　　　　　　　　
+                Take my wine in my own cup, friend.
+                It loses its wreath of foam when poured into that of others.
+
+                　　　　　　　　　　　　　　６２　　　　　　　　　　　　　　　　　　　　
+                “完全”为了对“不全”的爱，把自己装饰得美丽。　　　　　　　　　　
+                The perfect decks itself in beauty for the love of the Imperfect.
+
+                　　　　　　　　　　　　　　６３　　　　　　　　　　　　　　　　　　　　
+                神对人说：“我医治你所以伤害你，爱你所以惩罚你。”　　　　　　　　
+                God says to man, "I heal you therefore I hurt, love you therefore punish."
+
+                　　　　　　　　　　　　　　６４　　　　　　　　　　　　　　　　　　　　
+                谢谢火焰给你光明，但是不要忘了那执灯的人，他是坚忍地站在黑暗当中呢。
+                Thank the flame for its light, but do not forget the lampholder
+                standing in the shade with constancy of patience.
+
+                　　　　　　　　　　 　６５　　　　　　　　　　　　　　　　　　　　
+                小草呀，你的足步虽小，但是你拥有你足下的土地。　　　　　　　　　　
+                Tiny grass, your steps are small, but you possess the earth under
+                your tread.
+
+                　　　　　　　　　　　　　　６６　　　　　　　　　　　　　　　　　　　　
+                　幼花的蓓蕾开放了，它叫道：“亲爱的世界呀，请不要萎谢了。”
+                The infant flower opens its bud and cries, "Dear World, please do not
+                fade."
+
+                　　　　　　　　　　　　　　６７　　　　　　　　　　　　　　　　　　　　
+                神对于那些大帝国会感到厌恶，却决不会厌恶那些小小的花朵。　　　　　
+                God grows weary of great kingdoms, but never of little flowers.
+
+                　　　　　　　　　　　　　　６８　　　　　　　　　　　　　　　　　　　　
+                错误经不起失败，但是真理却不怕失败。　　　　　　　　　　　　　　　
+                Wrong cannot afford defeat but Right can.
+
+                　　　　　　　　　　　　　　６９　　　　　　　　　　　　　　　　　　　　
+                瀑布歌唱道：“虽然渴者只要少许的水便够了，我却很快活地给与了我的全
+                部的水。　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+                I give my whole water in joy,
+                it is enough for the thirsty.
+
+                　　　　　　　　　　　　　　７０　　　　　　　　　　　　　　　　　　　　
+                把那些花朵抛掷上去的那一阵子无休无止的狂欢大喜的劲儿，其源泉是在哪
+                里呢？　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+                Where is the fountain that throws up these flowers in a ceaseless
+                outbreak of ecstasy?
+
+                　 ７１　　　　　　　　　　　　　　　　　　　　
+
+                樵夫的斧头，问树要斧柄。　　　　　　　　　　　　　　　　　　
+                树便给了他。　　　　　　　　　　　　　　　　　　　　　　　　　　　
+                The woodcutter's axe begged for its handle from the tree.
+                The tree gave it.
+
+                　　　　　　　　　　　　　　７２　　　　　　　　　　　　　　　　　　　　
+                这寡独的黄昏，幕着雾与雨，我在我的心的孤寂里，感觉到它的叹息。　　
+                In my solitude of heart I feel the sigh of this widowed evening veiled
+                with mist and rain.
+
+                　　　　　　　　　　　　　　７３　　　　　　　　　　　　　　　　　　　　
+                贞操是从丰富的爱情中生出来的财富。　　　　　　　　　　　　　　　　
+                Chastity is a wealth that comes from abundance of love.
+
+                　　　　　　　　　　　　　　７４　　　　　　　　　　　　　　　　　　　　
+                雾，象爱情一样，在山峰的心上游戏，生出种种美丽的变幻。　　　　　　
+                The mist, like love, plays upon the heart of the hills and bring out
+                surprises of beauty.
+
+                　　　　　　　　　　 　７５　　　　　　　　　　　　　　　　　　　　
+                我们把世界看错了，反说它欺骗我们。　　　　　　　　　　　　　　　　
+                We read the world wrong and say that it deceives us.
+
+                　　　　　　　　　　　　　　７６　　　　　　　　　　　　　　　　　　　　
+                　诗人－－飙风，正出经海洋森林，追求它自己的歌声。　　　
+                The poet wind is out over the sea and the forest to seek his own voice.
+
+                　　　　　　　　　　　　　　７７　　　　　　　　　　　　　　　　　　　　
+                每一个孩子出生时都带来信息说：神对人并未灰心失望。　　　　　　　　
+                Every child comes with the message that God is not yet discouraged of man.
+
+                　　　　　　　　　　　　　　７８　　　　　　　　　　　　　　　　　　　　
+                绿草求她地上的伴侣。　　　　　　　　　　　　　　　　　　　　　　　
+                树木求他天空的寂寞。　　　　　　　　　　　　　　　　　　　　　　　
+                The grass seeks her crowd in the earth.
+                The tree seeks his solitude of the sky.
+
+                　　　　　　　　　　　　　　７９　　　　　　　　　　　　　　　　　　　　
+                人对他自己建筑起堤防来。　　　　　　　　　　　　　　　　　　　　　
+                Man barricades against himself.
+
+                　　　　　　　　　　　　　　８０　　　　　　　　　　　　　　　　　　　　
+                我的朋友，你的语声飘荡在我的心里，象那海水的低吟声绕缭
+                在静听着的松林之间。　　　　　　　　　　　　　　　　　　　　　　　　　　
+                Your voice, my friend, wanders in my heart, like the muffled sound
+                of the sea among these listening pines.
+
+                　 ８１　　　　　　　　　　　　　　　　　　　　
+
+                这个不可见的黑暗之火焰，以繁星为其火花的，到底是什么呢？　　　　　
+                What is this unseen flame of darkness whose sparks are the stars?
+
+                　　　　　　　　　　　　　　８２　　　　　　　　　　　　　　　　　　　　
+                使生如夏花之绚烂，死如秋叶之静美。　　　　　　　　　　　　　　　　
+                Let life be beautiful like summer flowers and death like autumn leaves.
+
+                　　　　　　　　　　　　　　８３　　　　　　　　　　　　　　　　　　　　
+                那想做好人的，在门外敲着门；那爱人的看见门敞开着。 　　　　　　
+                He who wants to do good knocks at the gate; he who loves finds the
+                gate open.
+
+                　　　　　　　　　　　　　　８４　　　　　　　　　　　　　　　　　　　　
+                在死的时候，众多和而为一；在生的时候，一化为众多。　　　　　　　　
+                神死了的时候，宗教便将合而为一。　　　　　　　　　　　　　　　　　
+                In death the many becomes one; in life the one becomes many.
+                Religion will be one when God is dead.
+
+                　　　　　　　　　　 　８５　　　　　　　　　　　　　　　　　　　　
+                艺术家是自然的情人，所以他是自然的奴隶，也是自然的主人。　　　　　
+                The artist is the lover of Nature, therefore he is her slave and her
+                master.
+
+                　　　　　　　　　　　　　　８６　　　　　　　　　　　　　　　　　　　　
+                　“你离我有多远呢，果实呀？”　　　　　　　　　　　　　　　　　　　
+                “我藏在你心里呢，花呀。”　　　　　　　　　　　　　　　　　　　　
+                How far are you from me, O Fruit?
+                I am hidden in your heart, O Flower.
+
+                　　　　　　　　　　　　　　８７　　　　　　　　　　　　　　　　　　　　
+                这个渴望是为了那个在黑夜里感觉得到，在大白天里却看不见的人。　　　
+                This longing is for the one who is felt in the dark, but not seen
+                in the day.
+
+                　　　　　　　　　　　　　　８８　　　　　　　　　　　　　　　　　　　　
+                露珠对湖水说道；“你是在荷叶下面的大露珠，我是在荷叶上面的较小的露
+                珠。”　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+                You are the big drop of dew under the lotus leaf, I am the smaller
+                one on its upper side," said the dewdrop to the lake.
+
+                　　　　　　　　　　　　　　８９　　　　　　　　　　　　　　　　　　　　
+                刀鞘保护刀的锋利，它自己则满足于它的迟钝。　　　　　　　　　　　　
+                The scabbard is content to be dull when it protects the keenness of
+                the sword.
+
+                　　　　　　　　　　　　　　９０　　　　　　　　　　　　　　　　　　　　
+                在黑暗中，“一”视如一体；在光亮中，“一”便视如众多。　　　　　　
+                在静听着的松林之间。　　　　　　　　　　　　　　　　　　　　　　　　　　
+                In darkness the One appears as uniform; in the light the One appears
+                as manifold.
+
+                　９１　　　　　　　　　　　　　　　　　　　　
+
+                大地借助于绿草，显出她自己的殷勤好客。　　　　　　　　　　　　　　
+                The great earth makes herself hospitable with the help of the grass.
+
+                　　　　　　　　　　　　　　９２　　　　　　　　　　　　　　　　　　　　
+                绿叶的生与死乃是旋风的急骤的旋转，它的更广大的旋转的圈子乃是在天上
+                繁星之间徐缓的转动。　　　　　　　　　　　　　　　　　　　　　　　　　　
+                The birth and death of the leaves are the rapid whirls of the eddy
+                whose wider circles move slowly among stars.
+
+                　　　　　　　　　　　　　　９３　　　　　　　　　　　　　　　　　　　　
+                权势对世界说道：“你是我的。”　　　　　　　　　　　　　　　　　　
+                世界便把权势囚禁在她的宝座下面。　　　　　　　　　　　　　　　　　
+                爱情对世界说道：“我是你的。”　　　　　　　　　　　　　　　　　　
+                世界便给予爱情以在它屋内来往的自由。　　　　　　　　　　　　　　　
+                Power said to the world, "You are mine."
+                The world kept it prisoner on her throne.
+                Love said to the world, "I am thine."
+                The world gave it the freedom of her house.
+
+                　　　　　　　　　　　　　　９４　　　　　　　　　　　　　　　　　　　　
+                浓雾仿佛是大地的愿望。　　　　　　　　　　　　　　　　　　　　　　
+                它藏起了太阳，而太阳原是她所呼求的。　　　　　　　　　　　　　　　
+                The mist is like the earth's desire.
+                It hides the sun for whom she cries.
+
+                　　　　　　　　　　 　９５　　　　　　　　　　　　　　　　　　　　
+                安静些吧，我的心，这些大树都是祈祷者呀。　　　　　　　　　　　　　
+                Be still, my heart, these great trees are prayers.
+
+                　　　　　　　　　　　　　　９６　　　　　　　　　　　　　　　　　　　　
+                瞬刻的喧声，讥笑着永恒的音乐。　　　　　　　　　　　　　　　　　　
+                The noise of the moment scoffs at the music of the Eternal.
+
+                　　　　　　　　　　　　　　９７　　　　　　　　　　　　　　　　　　　　
+                我想起了浮泛在生与爱与死的川流上的许多别的时代，以及这些时代之被遗
+                忘，我便感觉到离开尘世的自由了。　　　　　　　　　　　　　　　　　　　　
+                I think of other ages that floated upon the stream of life and love
+                and death and are forgotten, and I feel the freedom of passing away.
+
+                　　　　　　　　　　　　　　９８　　　　　　　　　　　　　　　　　　　　
+                我灵魂里的忧郁就是她的新婚的面纱。　　　　　　　　　　　　　　　　
+                这面纱等候着在夜间卸去。　　　　　　　　　　　　　　　　　　　　　
+                The sadness of my soul is her bride's veil.
+                It waits to be lifted in the night.
+
+                　　　　　　　　　　　　　　９９　　　　　　　　　　　　　　　　　　　　
+                死之印记给生的钱币以价值，使它能够用生命来购买那真正的宝物。　　　
+                Death's stamp gives value to the coin of life; making it possible
+                to buy with life what is truly precious.
+
+                　　　　　　　　　　　　　 １００　　　　　　　　　　　　　　　　　　　　
+                白云谦逊地站在天之一隅。　　　　　　　　　　　　　　　　　　　　　
+                晨光给它戴上霞彩。　　　　　　　　　　　　　　　　　　　　　　　　
+                The cloud stood humbly in a corner of the sky.
+                The morning crowned it with splendour.
+
+                　 １０１　　　　　　　　　　　　　　　　　　　
+
+                尘土受到损辱，却以她的花朵来报答。　　　　　　　　　　　　　　　　
+                The dust receives insult and in return offers her flowers.
+
+                　　　　　　　　　　　　　　１０２　　　　　　　　　　　　　　　　　　　
+                只管走过去，不必逗留着采了花朵来保存，因为一路上花朵自会继续开放的。
+                Do not linger to gather flowers to keep them, but walk on,
+                for flowers will keep themselves blooming all your way.
+
+                　　　　　　　　　　　　　　１０３　　　　　　　　　　　　　　　　　　　
+                根是地下的枝。　　　　　　　　　　　　　　　　　　　　　　　　　　
+                枝是空中的根。　　　　　　　　　　　　　　　　　　　　　　　　　　
+                Roots are the branches down in the earth.
+                Branches are roots in the air.
+
+                　　　　　　　　　　　　　　１０４　　　　　　　　　　　　　　　　　　　
+                远远去了的夏之音乐，翱翔于秋间，寻求它的旧垒。　　　　　　　　　　
+                The music of the far-away summer flutters around the Autumn seeking
+                its former nest.
+
+                　　　　　　　　　　　 １０５　　　　　　　　　　　　　　　　　　　
+                不要从你自己的袋里掏出勋绩借给你的朋友，这是污辱他的。　　　　　　
+                Do not insult your friend by lending him merits from your own pocket.
+
+                　　　　　　　　　　　　　　１０６　　　　　　　　　　　　　　　　　　　
+                无名的日子的感触，攀缘在我的心上，正象那绿色的苔藓，攀
+                缘在老树的周身。　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+                The touch of the nameless days clings to my heart like mosses round
+                the old tree.
+
+                　　　　　　　　　　　　　　１０７　　　　　　　　　　　　　　　　　　　
+                回声嘲笑她的原声，以证明她是原声。　　　　　　　　　　　　　　　　
+                The echo mocks her origin to prove she is the original.
+
+                　　　　　　　　　　　　　　１０８　　　　　　　　　　　　　　　　　　　
+                当富贵利达的人夸说他得到神的特别恩惠时，上帝却羞了。　　　　　　　
+                God is ashamed when the prosperous boasts of His special favour.
+
+                　　　　　　　　　　　　　　１０９　　　　　　　　　　　　　　　　　　　
+                我投射我自己的影子在我的路上，因为我有一盏还没有燃点起来的明灯。　
+                I cast my own shadow upon my path, because I have a lamp that has not
+                been lighted.
+
+                　　　　　　　　　　　　　　１１０　　　　　　　　　　　　　　　　　　　
+                人走进喧哗的群众里去，为的是要淹没他自己的沉默的呼号。　　　　　　
+                Man goes into the noisy crowed to drown his own clamour of silence.
+
+                　 １１１　　　　　　　　　　　　　　　　　　　
+
+                终止于衰竭是“死亡”，但“圆满”却终止于无穷。　　　　　　　　　　
+                That which ends in exhaustion is death, but the perfect ending is
+                in the endless.
+
+                　　　　　　　　　　　　　　１１２　　　　　　　　　　　　　　　　　　　
+                太阳只穿一件朴素的光衣，白云却披了灿烂的裙裾。　　　　　　
+                The sun has his simple rode of light. The clouds are decked with
+                gorgeousness.
+
+                　　　　　　　　　　　　　　１１３　　　　　　　　　　　　　　　　　　　
+                山峰如群儿之喧嚷，举起他们的双臂，想去捉天上的星星。　　　　　　　
+                The hills are like shouts of children who raise their arms, trying
+                to catch stars.
+
+                　　　　　　　　　　　　　　１１４　　　　　　　　　　　　　　　　　　　
+                道路虽然拥挤，却是寂寞的，因为它是不被爱的。　　　　　　　　　　　
+                The road is lonely in its crowd for it is not loved.
+
+                　　　　　　　　　　 　１１５　　　　　　　　　　　　　　　　　　　
+                权势以它的恶行自夸，落下的黄叶与浮游的云片却在笑它。　　　　　　　
+                The power that boasts of its mischiefs is laughed at by the yellow
+                leaves that fall, and clouds that pass by.
+
+                　　　　　　　　　　　　　　１１６　　　　　　　　　　　　　　　　　　　
+                今天大地在太阳光里向我营营哼鸣，象一个织着布的妇人，用一种已经被忘
+                却的语言，哼着一些古代的歌曲。　　　　　　　　　　　　　　　　　　　　　
+                The earth hums to me today in the sun, like a woman at her spinning,
+                some ballad of the ancient time in a forgotten tongue.
+
+                　　　　　　　　　　　　　　１１７　　　　　　　　　　　　　　　　　　　
+                绿草是无愧于它所生长的伟大世界的。　　　　　　　　　　　　　　　　
+                the grass-blade is worthy of the great world where it grows.
+
+                　　　　　　　　　　　　　　１１８　　　　　　　　　　　　　　　　　　　
+                梦是一个一定要谈话的妻子。　　　　　　　　　　　　　　　　　　　　
+                睡眠是一个默默忍受的丈夫。　　　　　　　　　　　　　　　　　　　　
+                Dream is a wife who must talk,
+                Sleep is a husband who silently suffers.
+
+                　　　　　　　　　　　　　　１１９　　　　　　　　　　　　　　　　　　　
+                夜与逝去的日子接吻，轻轻地在他耳旁说道：“我是死，是你的母亲。我就
+                要给你以新的生命。　　　　　　　　　　　　　　　　　　　　　　　　　　　
+                The night kisses the fading day whispering to his ear, I am death,
+                your mother. I am to give you fresh birth.
+
+                　　　　　　　　　　　　　　１２０　　　　　　　　　　　　　　　　　　　
+                黑夜呀，我感觉到你的美了。你的美如一个可爱的妇人，当她把灯灭了的时
+                候。　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+                I feel thy beauty, dark night, like that of the loved woman when
+                she has put out the lamp.
+
+                　１２１　　　　　　　　　　　　　　　　　　　
+
+                我把在那些已逝去的世界上的繁荣带到我的世界上来。　　　　　　　　　
+                I carry in my world that flourishes the worlds that have failed.
+
+                　　　　　　　　　　　　　　１２２　　　　　　　　　　　　　　　　　　　
+                亲爱的朋友呀，当我静听着海涛时，我好几次在暮色深沉的黄昏里，在这个
+                海岸上，感到你的伟大思想的沉默了。　　　　　　　　　　　　　　　　　　　
+                Dear friend, I feel the silence of your great thoughts of many a
+                deepening eventide on this beach when I listen to these waves.
+
+                　　　　　　　　　　　　　　１２３　　　　　　　　　　　　　　　　　　　
+                鸟以为把鱼举在空中是一种慈善的举动。　　　　　　　　　　　　　　　
+                The bird thinks it is an act of kindness to give the fish a life
+                in the air.
+
+                　　　　　　　　　　　　　　１２４　　　　　　　　　　　　　　　　　　　
+                夜对太阳说道：“在月亮中，你送了你的情书给我。”　　　　　　　　　
+                “我已在绿草上留下了我的流着泪点的回答了。”　　　　　　　　　　　
+                In the moon thou sendest thy love letters to me,
+                I leave my answers in tears upon the grass.
+
+                　　　　　　　　　　　 １２５　　　　　　　　　　　　　　　　　　　
+                伟人是一个天生的孩子，当他死时，他把他的伟大的孩提时代给了世界。　
+                The great is a born child; when he dies he gives his great childhood
+                to the world.
+
+                　　　　　　　　　　　　　　１２６　　　　　　　　　　　　　　　　　　　
+                不是槌的打击，乃是水的载歌载舞，使鹅卵石臻于完美。　　
+                Not hammer-strokes, but dance of the water sings the pebbles
+                into perfection.
+
+                　　　　　　　　　　　　　　１２７　　　　　　　　　　　　　　　　　　　
+                蜜蜂从花中啜蜜，离开时营营地道谢。　　　　　　　　　　
+                浮华的蝴蝶却相信花是应该向它道谢的。　　　　　　　　　　　　　　　
+                Bees sip honey from flowers and hum their thanks when they leave.
+                The gaudy butterfly is sure that the flowers owe thanks to him.
+
+                　　　　　　　　　　　　　　１２８　　　　　　　　　　　　　　　　　　　
+                如果你不等待着要说出完全的真理，那末把真话说出来是很容易的。　　　
+                To be outspoken is easy when you do not wait to speak the complete truth.
+
+                　　　　　　　　　　　　　　１２９　　　　　　　　　　　　　　　　　　　
+                “可能”问“不可能”道：　　　　　　　　　　　　　　　　　　　　　
+                “你住在什么地方呢？”　　　　　　　　　　　　　　　　　　　　　　
+                它回答道：“在那无能为力者的梦境里。”　　　　　　　　　　　　　　
+                Asks the Possible to the Impossible,
+                Where is your dwelling-place?
+                In the dreams of the impotent, comes the answer.
+
+                　　　　　　　　　　　　　　１３０　　　　　　　　　　　　　　　　　　　
+                如果你把所有的错误都关在门外时，真理也要被关在门外面了。　　　　　
+                If you shut your door to all errors truth will be shut out.
+
+                １３１
+                我听见有些东西在我心的忧闷后面萧萧作响，－－我不能看见它们。
+                I hear some rustle of things behind my sadness of heart,
+                ---I cannot see them.
+
+                １３２
+                闲暇在动作时便是工作。
+                静止的海水荡动时便成波涛。
+                Leisure in its activity is work.
+                The stillness of the sea stirs in waves.
+
+                １３３
+                绿叶恋爱时便成了花。
+                花崇拜时便成了果实。
+                The leaf becomes flower when it loves.
+                The flower becomes fruit when it worships.
+
+                １３４
+                埋在地下的树根使树枝产生果实，却不要什么报酬。
+                The roots below the earth claim no rewards for making the branches
+                fruitful.
+
+                １３５
+                阴雨的黄昏，风无休止地吹着。
+                我看着摇曳的树枝，想念万物的伟大。
+                This rainy evening the wind is restless.
+                I look at the swaying branches and ponder over the greatness of
+                all things.
+
+                １３６
+                子夜的风雨，如一个巨大的孩子，在不合时宜的黑夜里醒来，开始游喜和
+                喧闹。
+                Storm of midnight, like a giant child awakened in the untimely dark,
+                has begun to play and shout.
+
+                １３７
+                海呀，你这暴风雨的孤寂的新妇呀，你虽掀起波浪追随你的情人，但是无
+                用呀。
+                Thou raisest thy waves vainly to follow thy lover, O sea, thou
+                lonely bride of the storm.
+
+                １３８
+                文字对工作说道：“我惭愧我的空虚。”
+                工作对文字说道：“当我看见你的时，我便知道我是怎样地贫乏了。”
+                I am ashamed of my emptiness, said the Word to the Work.
+                I know how poor I am when I see you, said the Work to the Word.
+
+                １３９
+                时间是变化的财富。时钟模仿它，却只有变化而无财富。
+                Time is the wealth of change, but the clock in its parody makes
+                it mere change and no wealth.
+
+                １４０
+                真理穿了衣裳，觉得事实太拘束了。
+                在想象中，她却转动得很舒畅。
+                Truth in her dress finds facts too tight.
+                In fiction she moves with ease.
+
+
+
+                １４１
+                当我到这里那里旅行着时，路呀，我厌倦你了；当是现在，当你引导我到
+                各处去时我便爱上你，与你结婚了。
+                When I travelled to here and to there, I was tired of thee, O Road,
+                but now when thou leadest me to everywhere I am wedded to thee in love.
+
+                １４２
+                让我设想，在群星之中，有一颗星是指导着我的生命通过不可知的黑暗的。
+                Let me think that there is one among those stars that guides my life
+                through the dark unknown.
+
+                １４３
+                妇人，你用了你美丽的手指，触着我的什物，秩序便如音乐似的生出来了。
+                Woman, with the grace of your fingers you touched my things and order
+                came out like music.
+
+                １４４
+                一个忧郁的声音，筑巢于逝水似的年华中。　　　　
+                它在夜里向我唱道：“我爱你。”
+                One sad voice has its nest among the ruins of the years.
+                It sings to me in the night, ---I loved you.
+
+                １４５
+                燃着的火，以它熊熊的光焰警告我不要走近它。
+                把我从潜藏在灰中的余烬里救出来吧。
+                The flaming fire warns me off by its own glow.
+                Save me from the dying embers hidden under ashes.
+
+                １４６
+                我有群星在天上，
+                但是，唉，我屋里的小灯却没有点亮。
+                I have my stars in the sky.
+                But oh for my little lamp unlit in my house.
+
+                １４７
+                死文字的尘土沾着你。
+                用沉默去洗净你的灵魂吧。
+                The dust of the dead words clings to thee.
+                Wash thy soul with silence.
+
+                １４８
+                生命里留了许多罅隙，从中送来了死之忧郁的音乐。
+                Gaps are left in life through which comes the sad music of death.
+
+                １４９
+                世界已在早晨敞开了它的光明之心。
+                出来吧，我的心，带着你的爱去与它相会。
+                The world has opened its heart of light in the morning.
+                Come out, my heart, with thy love to meet it.
+
+                １５０
+                我的思想随着这些闪耀的绿叶而闪耀；我的心灵因了这日光的抚触而歌唱；
+                我的生命因为偕了万物一同浮泛在空间的蔚蓝，时间的墨黑而感到欢快*
+                My thoughts shimmer with these shimmering leaves and my heart sings
+                with the touch of this sunlight; my life is glad to be floating with
+                all things into the blue of space, into the dark of time.
+
+                １５１
+                神的巨大的威权是在柔和的微（风思）里，而不在狂风暴雨之中。
+                God's great power is in the gentle breeze, not in the storm.
+
+                １５２
+                在梦中，一切事都散漫着，都压着我，但这不过是一个梦呀。但我醒来时，
+                我便将觉得这些事都已聚集在你那里，我也便将自由了。
+                This is a dream in which things are all loose and they oppress.
+                I shall find them gathered in thee when I awake and shall be free.
+                １５３
+                落日问道：“有谁继续我的职务呢？”
+                瓦灯说道：“我要尽我所能地做去，我的主人。”
+                Who is there to take up my duties? asked the setting sun.
+                I shall do what I can, my Master, said the earthen lamp.
+
+                １５４
+                采着花瓣时，得不到花的美丽。
+                By plucking her petals you do not gather the beauty of the flower.
+
+                １５５
+                沉默蕴蓄着语声，正如鸟巢拥围着睡鸟。
+                Silence will carry your voice like the nest that holds the sleeping birds.
+
+                １５６
+                大的不怕与小的同游。
+                居中的却远而避之。
+                The Great walks with the Small without fear.
+                The Middling keeps aloof.
+
+                １５７
+                夜秘密地把花开放了，却让白日去领受谢词。
+                The night opens the flowers in secret and allows the day to get thanks.
+
+                １５８
+                权势认为牺牲者的痛苦是忘恩负义。
+                Power takes as ingratitude the writhings of its victims.
+
+                １５９
+                当我们以我们的充实为乐时，那末，我们便能很快乐地跟我们的果实分手
+                了。
+                When we rejoice in our fulness, then we can part with our fruits with joy.
+
+                １６０
+                雨点吻着大地，微语道：“我们是你的思家的孩子，母亲，现在从天上回
+                到你这里来了。”
+                The raindrops kissed the earth and whispered, --- We are thy homesick
+                children, mother, come back to thee from the heaven.
+
+                １６１
+                蛛网好象要捉露点，却捉住了苍蝇。
+                The cobweb pretends to catch dewdrops and catches flies.
+
+                １６２
+                爱情呀，当你手里拿着点亮了的痛苦之灯走来时，我能够看见你的脸，而
+                且以你为幸福。
+                Love! When you come with the burning lamp of pain in your hand,
+                I can see your face and know you as bliss.
+
+                １６３
+                萤火对天上的星说道：“学者说你的光明总有一天会消灭的。”
+                天上的星不回答它。
+                The leaned say that your lights will one day be no more, said the
+                firefly to the stars.
+                The stars made no answer.
+
+                １６４
+                在黄昏的微光里，有那清晨的鸟儿来到了我的沉默的鸟巢里。
+                In the dusk of the evening the bird of some early dawn comes to
+                the nest of my silence.
+
+                １６５
+                思想掠过我的心上，如一群野鸭飞过天空。
+                我听见它们鼓翼之声了。
+                Thoughts pass in my mind like flocks of lucks in the sky.
+                I hear the voice of their wings.
+
+                １６６
+                沟洫总喜欢想：河流的存在，是专为它供给水流的。
+                The canal loves to think that rivers exist solely to supply it with water.
+
+                １６７
+                世界以它的痛苦同我接吻，而要求歌声做报酬。
+                The world has kissed my soul with its pain, asking for its return
+                in songs.
+
+                １６８
+                压迫着我的，到底是我的想要外出的灵魂呢，还是那世界的灵魂，敲着我
+                心的门，想要进来呢？
+                That which oppresses me, is it my soul trying to come out in the open,
+                or the soul of the world knocking at my heart for its entrance?
+
+                １６９
+                思想以他自己的语言喂养它自己而成长起来了。
+                Thought feeds itself with its own words and grows.
+
+                １７０
+                我把我心之碗轻轻浸入这沉默之时刻中，它盛满了爱了。
+                I have dipped the vessel of my heart into this silent hour; it has
+                filled with love.
+
+
+                １７１
+                或者你在工作，或者你没有。
+                当你不得不说：“让我们做些事吧”时，那末就要开始胡闹了。
+                Either you have work or you have not.
+                When you have to say, "Let us do something", then begins mischief.
+
+                １７２
+                向日葵羞于把无名的花朵看作它的同胞。
+                太阳升上来了，向它微笑，说道：“你好么，我的宝贝儿？”
+                The sunflower blushed to own the nameless flower as her kin.
+                The sun rose and smiled on it, saying, "Are you well, my darling?"
+
+                １７３
+                “谁如命运似的催着我向前走呢？”
+                “那是我自己，在身背后大跨步走着。”
+                Who drives me forward like fate?
+                The Myself striding on my back.
+
+                １７４
+                云把水倒在河的水杯里，它们自己却藏在远山之中。
+                The clouds fill the watercups of the river, hiding themselves in
+                the distant hills.
+
+                １７５
+                我一路走去，从我的水瓶中漏出水来。
+                只剩下极少极少的水供我回家使用了。
+                I spill water from my water jar as I walk on my way,
+                Very little remains for my home.
+
+                １７６
+                杯中的水是光辉的；海中的水却是黑色的。
+                小理可以用文字来说清楚，大理却只有沉末。
+                The water in a vessel is sparkling; the water in the sea is dark.
+                The small truth has words that are clear; the great truth has great
+                silence.
+
+                １７７
+                你的微笑是你自己田园里的花，你的谈吐是你自己山上的松林的萧萧；但
+                是你的心呀，却是那个女人，那个我们全都认识的女人。
+                Your smile was the flowers of your own fields, your talk was the rustle
+                of your own mountain pines, but your heart was the woman that we all know.
+
+                １７８
+                我把小小的礼物留给我所爱的人，－－大的礼物却留给一切的人。
+                心的门，想要进来呢？
+                It is the little things that I leave behind for my loved ones,
+                ---great things are for everyone.
+
+                １７９
+                妇人呀，你用泪海包绕着世界的心，正如大海包绕着大地。
+                Woman, thou hast encircled the world s heart with the depth of thy
+                tears as the sea has the earth.
+
+                １８０
+                太阳以微笑向我问候。
+                雨，他的忧闷的姐姐，向我的心谈话。
+                The sunshine greets me with a smile.
+                The rain, his sad sister, talks to my heart.
+
+                １８１
+                我的昼间之花，落下它那被遗忘的花瓣。
+                在黄昏中，这花成熟为一颗记忆的金果。
+                My flower of the day dropped its petals forgotten.
+                In the evening it ripens into a golden fruit of memory.
+
+                １８２
+                我象那夜间之路，正静悄悄地谛听着记忆的足音。
+                I am like the road in the night listening to the footfalls of its
+                memories in silence.
+
+                １８３
+                黄昏的天空，在我看来，象一扇窗户，一盏灯火，灯火背后的一次等待。
+                The evening sky to me is like a window, and a lighted lamp,
+                and a waiting behind it.
+
+                １８４
+                太急于做好事的人，反而找不到时间去做好人。
+                He who is too busy doing good finds no time to be good.
+
+                １８５
+                我是秋云，空空地不载着雨水，但在成熟的稻田中，可以看见我的充实。
+                I am the autumn cloud, empty of rain, see my fulness in the field
+                of ripened rice.
+
+                １８６
+                他们嫉妒，他们残杀，人反而称赞他们。
+                然而上帝却害了羞，匆匆地把他的记忆埋藏在绿草下面。
+                They hated and killed and men praised them.
+                But God in shame hastens to hide its memory under the green grass.
+
+                １８７
+                脚趾乃是舍弃了其过去的手指。
+                Toes are the fingers that have forsaken their past.
+
+                １８８
+                黑暗向光明旅行，但是盲者却向死亡旅行。
+                Darkness travels towards light, but blindness towards death.
+
+                １８９
+                小狗疑心大宇宙阴谋篡夺它的位置。
+                The pet dog suspects the universe for scheming to take its place.
+
+                １９０
+                静静地坐着吧，我的心，不要扬起你的尘土。
+                让世界自己寻路向你走来。
+                Sit still, my heart, do not raise your dust.
+                Let the world find its way to you.
+
+                １９１
+                弓在箭要射出之前，低声对箭说道：“你的自由就是我的自由。”
+                The bow whispers to the arrow before it speeds forth--
+                Your freedom is mine.
+
+                １９２
+                妇人，在你的笑声里有着生命之泉的音乐。
+                Woman, in your laughter you have the music of the fountain of life.
+
+                １９３
+                全是理智的心，恰如一柄全是锋刃的刀。
+                它叫使用它的人手上流血。
+                A mind all logic is like a knife all blade.
+                It makes the hand bleed that uses it.
+
+                １９４
+                神爱人间的灯光甚于他自己的大星。
+                God loves man's lamp lights better than his own great stars.
+
+                １９５
+                这世界乃是为美之音乐所驯服了的狂风骤雨的世界。
+                This world is the world of wild storms kept tame with the music of beauty.
+
+                １９６
+                晚霞向太阳说道：“我的心经了你的接吻，便似金的宝箱了。”
+                My heart is like the golden casket of thy kiss,
+                cloud to the sun.
+
+                １９７
+                接触着，你许会杀害；远离着，你许会占有。
+                By touching you may kill, by keeping away you may possess.
+
+                １９８
+                蟋蟀的唧唧，夜雨的淅沥，从黑暗中传到我的耳边，好似我已逝的
+                少年时代沙地来到我的梦境中。
+                The cricket's chirp and the patter of rain come to me through the dark,
+                like the rustle of dreams from my past youth.
+
+                １９９
+                花朵向星辰落尽了的曙天叫道：“我的露点全失落了。”
+                I have lost my dewdrop,
+                lost all its stars.
+
+                ２００
+                燃烧着的木块，熊熊地生出火光，叫道：“这是我的花朵，我的死亡。”
+                让世界自己寻路向你走来。
+                The burning log bursts in flame and cri
+
+                ２０１ 黄蜂认为邻蜂储蜜之巢太小。 他的邻人要他去建筑一个更小的。
+
+                The wasp thinks that the honeyhive of the neighbouring bees is too small. His neighbours ask him to build one still smaller.
+
+                ２０２ 河岸向河流说道：“我不能留住你的波浪。 让我保存你的足印在我的心里吧。”
+
+                I cannot keep your waves, Let me keep your footprints in my heart.
+
+                ２０３ 白日以这小小的地球的喧扰，淹没了整个宇宙的沉默。
+
+                The day, with the noise of this little earth, drowns the silence of all worlds.
+
+                ２０４ 歌声在天空中感到无限，图画在地上感到无限，诗呢，无论在空中，在地上都是如此。 因为诗的词句含有能走动的意义与能飞翔的音乐。
+
+                The song feels the infinite in the air, the picture in the earth, the poem in the air and the earth; For its words have meaning that walks and music that soars.
+
+                ２０５ 太阳在西方落下时，他的早晨的东方已静悄悄地站在他面前。
+
+                When the sun goes down to the West, the East of his morning stands before him in silence.
+
+                ２０６ 让我不要错误地把自己放在我的世界里而使它反对我。
+
+                Let me not put myself wrongly to my world and set it against me.
+
+                ２０７ 荣誉使我感到惭愧，因为我暗地里求着它。
+
+                Praise shames me, for I secretly beg for it.
+
+                ２０８ 当我没有什么事做时，便让我不做什么事，不受骚扰地沉入安静深处吧，一如海水沉默时海边的暮色。
+
+                Let my doing nothing when I have nothing to do become untroubled in its depth of peace like the evening in the seashore when the water is silent.
+
+                ２０９ 少女呀，你的纯朴，如湖水之碧，表现出你的真理之深邃。
+
+                Maiden, your simplicity, like the blueness of the lake, reveals your depth of truth.
+
+                ２１０ 最好的东西不是独来的， 它伴了所有的东西同来。
+
+                The best does not come alone. It comes with the company of the all.
+
+                ２１１ 神的右手是慈爱的，但是他的左手却可怕。
+
+                God’s right hand is gentle, but terrible is his left hand.
+
+                ２１２ 我的晚色从陌生的树木中走来，它用我的晓星所不懂得的语言说话。
+
+                My evening came among the alien trees and spoke in a language which my morning stars did not know.
+
+                ２１３ 夜之黑暗是一只口袋，迸出黎明的金光。
+
+                Night’s darkness is a bag that bursts with the gold of the dawn.
+
+                ２１４ 我们的欲望把彩虹的颜色借给那只不过是云雾的人生。
+
+                Our desire lends the colours of the rainbow to the mere mists and vapours of life.
+
+                ２１５ 神等待着，要从人的手上把他自己的花朵作为礼物赢得回去。
+
+                God waits to win back his own flowers as gifts from man’s hands.
+
+                ２１６ 我的忧思缠绕着我，要问我它自己的名字。
+
+                My sad thoughts tease me asking me their own names.
+
+                ２１７ 果的事业是尊贵的，花的事业是甜美的；但是让我做叶的事业吧，叶是谦逊地，专心地垂着绿荫的。
+
+                The service of the fruit is precious, the service of the flower is sweet, but let my service be the service of the leaves in its shade of humble devotion.
+
+                ２１８ 我的心向着阑珊的风张了帆，要到无论何处的荫凉之岛去。
+
+                My heart has spread its sails to the idle winds for the shadowy island of Anywhere.
+
+                ２１９ 独夫们是凶暴的，但人民是善良的。
+
+                Men are cruel, but Man is kind.
+
+                ２２０ 把我当做你的杯吧，让我为了你，而且为了你的人而盛满水吧。
+
+                Make me thy cup and let my fulness be for thee and for thine.
+
+                ２２１ 狂风暴雨象是在痛苦中的某个天神的哭声，因为他的爱情被大地所拒绝。
+
+                The storm is like the cry of some god in pain whose love the earth refuses.
+
+                ２２２ 世界不会流失，因为死亡并不是一个罅隙。
+
+                The world does not leak because death is not a crack.
+
+                ２２３ 生命因为付出了的爱情而更为富足。
+
+                Life has become richer by the love that has been lost.
+
+                ２２４ 我的朋友，你伟大的心闪射出东方朝阳的光芒，正如黎明中的一个积雪的孤峰。
+
+                My friend, your great heart shone with the sunrise of the East like the snowy summit of a lonely hill in the dawn.
+
+                ２２５ 死之流泉，使生的止水跳跃。 The fountain of death makes the still water of life play.
+
+                ２２６ 那些有一切东西而没有您的人，我的上帝，在讥笑着那些没有别的东西而只有您的人呢。
+
+                Those who have everything but thee, my God, laugh at those who have nothing but thyself.
+
+                ２２７ 生命的运动在它自己的音乐里得到它的休息。
+
+                The movement of life has its rest in its own music.
+
+                ２２８ 踢足只能从地上扬起尘土而不能得到收获。
+
+                Kicks only raise dust and not crops from the earth.
+
+                ２２９ 我们的名字，便是夜里海波上发出的光，痕迹也不留就抿灭了。
+
+                Our names are the light that glows on the sea waves at night and then dies without leaving its signature.
+
+                ２３０ 让睁眼看着玫瑰花的人也看看它的刺。
+
+                Let him only see the thorns who has eyes to see the rose.
+
+                ２３１ 鸟翼上系上了黄金，这鸟便永不能再在天上翱翔了。
+
+                Set the bird’s wings with gold and it will never again soar in the sky.
+
+                ２３２ 我们地方的荷花又在这陌生的水上开了花，放出同样的清香，只是名字换了。
+
+                The same lotus of our clime blooms here in the alien water with the same sweetness, under another name.
+
+                ２３３ 在心的远景里，那相隔的距离显得更广阔了。
+
+                In heart’s perspective the distance looms large.
+
+                ２３４ 月儿把她的光明遍照在天上，却留着她的黑斑给她自己。
+
+                The moon has her light all over the sky, her dark spots to herself.
+
+                ２３５ 不要说：“这是早晨”，别用一个“昨天”的名词把它打发掉。你第一次看到它，把它当作还没有名字的新生孩子吧。
+
+                Do not say, "It is morning," and dismiss it with a mane of yesterday. See it for the first time as a new-born child that has no name.
+
+                ２３６ 青烟对天空夸口，灰烬对大地夸口，都以为它们是火的兄弟。
+
+                Smoke boasts to the sky, and Ashes to the earth, that they are brothers to the fire.
+
+                ２３７ 雨点向茉莉花微语道：“把我永久地留在你的心里吧。” 茉莉花叹息了一声，落在地上了。
+
+                The raindrop whispered to the jasmine, "Keep me in your heart for ever." The jasmine sighed, "Alas," and dropped to the ground.
+
+                ２３８ 腆怯的思想呀，不要怕我。 我是一个诗人。
+
+                Timid thoughts, do not be afraid of me. I am a poet.
+
+                ２３９ 我的心在朦胧的沉默里，似乎充满了蟋蟀的鸣声－－声音的灰暗的 暮色。
+
+                The dim silence of my mind seems filled with crickets’ chirp --- the grey twilight of sound.
+
+                ２４０ 爆竹呀，你对群星的侮蔑，又跟着你自己回到地上来了。
+
+                Rockets, your insult to the stars follows yourself back to the earth.
+
+                ２４１ 您曾经带领着我，穿过我的白天的拥挤不堪的旅程，而到达了我的黄昏的孤寂之境。 在通宵的寂静里，我等待着它的意义。
+
+                Thou hast led me through my crowded travels of the day to my evening’s loneliness. I wait for its meaning through the stillness of the night.
+
+                ２４２ 我们的生命就似渡过一个大海，我们都相聚在这个狭小的舟中。 死时，我们便到了岸，各往各的世界去了。 This life is the crossing of a sea, where we meet in the same narrow ship. In death we reach the shore and go to our different worlds.
+
+                ２４３ 真理之川从它的错误之沟渠中流过。
+
+                The stream of truth flows through its channels of mistakes.
+
+                ２４４ 今天我的心是在想家了，在想着那跨过时间之海的那一个甜蜜的时候。
+
+                My heart is homesick today for the one sweet hour across the sea of time.
+
+                ２４５ 鸟的歌声是曙光从大地反响过去的回声。
+
+                The bird-song is the echo of the morning light back from the earth.
+
+                ２４６ 晨光问毛茛道：“你是骄傲得不肯和我接吻么？”
+
+                Are you too proud to kiss me?
+
+                ２４７ 小花问道：“我要怎样地对你唱，怎样地崇拜你呢？太阳呀？” 太阳答道：“只要用你的纯洁的素朴的沉默。” How may I sing to thee and worship, O Sun? By the simple silence of thy purity,
+
+                ２４８ 当人是兽时，他比兽还坏。
+
+                Man is worse than an animal when he is an animal.
+
+                ２４９ 黑云受光的接吻时便变成天上的花朵。
+
+                Dark clouds become heaven’s flowers when kissed by light.
+
+                ２５０ 不要让刀锋讥笑它柄子的拙钝。
+
+                Let not the sword-blade mock its handle for being blunt.
+
+                ２５１ 夜的沉默，如一个深深的灯盏，银河便是它燃着的灯光。
+
+                The night’s silence, like a deep lamp, is burning with the light of its milky way.
+
+                ２５２ 死象大海的无限的歌声，日夜冲击着生命的光明岛的四周。
+
+                Around the sunny island of Life swells day and night death’s limitless song of the sea.
+
+                ２５３ 花瓣似的山峰在饮着日光，这山岂不象一朵花吗繝
+
+                Is not this mountain like a flower, with its petals of hill, drinking the sunlight?
+
+                ２５４ “真实”的含义被误解，轻重被倒置，那就成了“不真实”。
+
+                The real with its meaning read wrong and emphasis misplaced is the unreal.
+
+                ２５５ 我的心呀，从世界的流动找你的美吧，正如那小船得到风与水的优美似的。
+
+                Find your beauty, my heart, from the world’s movement, like the boat that has the grace of the wind and the water.
+
+                ２５６ 眼不能以视来骄人，却以它们的眼镜来骄人。
+
+                The eyes are not proud of their sight but of their eyeglasses.
+
+                ２５７ 我住在我的这个小小的世界里，生怕使它再缩小一丁点儿。把我抬举到您的世界里去吧，让我高高兴兴地失去我的一切的自由。
+
+                I live in this little world of mine and am afraid to make it the least less. Life me into thy world and let me have the freedom gladly to lose my all.
+
+                ２５８ 虚伪永远不能凭借它生长在权力中而变成真实。
+
+                The false can never grow into truth by growing in power.
+
+                ２５９ 我的心，同着它的歌的拍拍舐岸的波浪，渴望着要抚爱这个阳光熙和的绿色世界。
+
+                My heart, with its lapping waves of son, longs to caress this green world of the sunny day.
+
+                ２６０ 道旁的草，爱那天上的星吧，你的梦境便可在花朵里实现了。
+
+                Wayside grass, love the star, then your dreams will come out in flowers.
+
+                ２６１ 让你的音乐如一柄利刃，直刺入市井喧扰的心中吧。
+
+                Let your music, like a sword, pierce the noise of the market to its heart.
+
+                ２６２ 这树的颤动之叶，触动着我的心，象一个婴儿的手指。
+
+                The trembling leaves of this tree touch my heart like the fingers of an infant child.
+
+                ２６３ 小花睡在尘土里。 它寻求蛱蝶走的道路。
+
+                The little flower lies in the dust. It sought the path of the butterfly.
+
+                ２６４ 我是在道路纵横的世界上。 夜来了。打开您的门吧，家之世界呵！
+
+                I am in the world of the roads. The night comes. Open thy gate, thou world of the home.
+
+                ２６５ 我已经唱过了您的白天的歌。 在黄昏的时候，让我拿着您的灯走过风雨飘摇的道路吧。
+
+                I have sung the songs of thy day. In the evening let me carry thy lamp through the stormy path.
+
+                ２６６ 我不要求你进我的屋里。 你到我无量的孤寂里来吧，我的爱人！
+
+                I do not ask thee into the house. Come into my infinite loneliness, my Lover.
+
+                ２６７ 死亡隶属于生命，正与生一样。 举足是走路，正如落足也是走路。
+
+                Death belongs to life as birth does. The walk is in the raising of the foot as in the laying of it down.
+
+                ２６８ 我已经学会在花与阳光里微语的意义。－－再教我明白你在苦与死中所说的话吧。
+
+                I have learnt the simple meaning of thy whispers in flowers and sunshine ---teach me to know thy words in pain and death.
+
+                ２６９ 夜的花朵来晚了，当早晨吻着她时，她颤栗着，叹息了一声，萎落在地上了。
+
+                The night’s flower was late when the morning kissed her, she shivered and sighed and dropped to the ground.
+
+                ２７０ 从万物的愁苦中，我听见了“永恒母亲”的呻吟。
+
+                Through the sadness of all things I hear the crooning of the Eternal Mother.
+
+                ２７１ 大地呀，我到你岸上时是一个陌生人，住在你屋内时是一个宾客，离开你的门时是一个朋友。
+
+                I came to your shore as a stranger, I lived in your house as a guest, I leave your door as a friend, my earth.
+
+                ２７２ 当我去时，让我的思想到你那里来，如那夕阳的余光，映在沉默的星天的边上。
+
+                Let my thoughts come to you, when I am gone, like the after glow of sunset at the margin of starry silence.
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" class="ui-btn"><a href="#pagetwo" data-role="button" data-transition="flip" data-direction="reverse">返回</a></div>
+
+    </div>
+    <div id="text_005" data-theme="r" data-role="page">
+        <div data-role="header"><a href="#pagetwo">返回</a><h2>走着走着就散了，回忆都淡了</h2><a href="#">搜索</a></div>
+        <div data-role="content">
+            <h3>走着走着就散了，回忆都淡了</h3>
+            <div>
+                <h4>走着走着就散了，回忆都淡了</h4>
+                风吹过云就散了，影子淡了，
+                <br><br>夕阳靠着山倦了，天空暗了；
+                <br><br>一朵花开得厌了，春天怨了，
+                <br><br>鸟儿飞得不见了，清晨乱了。
+                <br><br>长长的发辫散了，青春，淡了，
+                <br><br>舞不停的脚倦了，眼神，暗了；
+                <br><br>两个人厌了，心里怨了，
+                <br><br>路的尽头不见了，步子乱了。
+                <br><br>是散了，淡了，是倦了，又暗了，
+                <br><br>是草儿绿过就算了，是季节变了；
+                <br><br>谁厌了，怨了，谁不见了，谁又乱了？
+                <br><br>谁许的诺言不算了，谁和谁的爱情变了？
+                <br><br>海枯石烂了，地球不转了，
+                <br><br>主角都换了，情话听惯了。
+                <br><br>走着走着就散了，回忆都淡了，
+                <br><br>看着看着就倦了，星光也暗了；
+                <br><br>听着听着就厌了，开始埋怨了，
+                <br><br>回头发现你不见了，突然我乱了。
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" class="ui-btn"><a href="#pagetwo" data-role="button" data-transition="flip" data-direction="reverse">返回</a></div>
+
+    </div>
+    <div id="text_0001" data-theme="c" data-role="page">
+        <div data-role="header"><a href="#pagetwo">返回</a><h2>随笔</h2><a href="#">搜索</a></div>
+        <div data-role="content">
+            <h3>有些话，说给另一个自己听</h3>
+           <div>
+               *不是想和你吵架，只是好久听不到你声音想了。才挑挑火的，怕你压抑太久累呢，给个机会发泄发泄。
+               <br><br> *傻蛋啊，说了娶你就一定娶你，再怎么对我使性子都不好使，因为每一次的回忆，都是我更爱你，更心疼你的理由啊！
+               <br><br> *“丫头，我们私奔吧。”
+               <br>“好啊好啊。”
+               <br>“真乖！”
+               <br>好吧，我承认，这是我自己乱想的一个画面，虽然不现实，但偶尔在心里想想也不犯罪嘛！
+               <br><br>*傻丫头，你劝不了我的，放不下你就是放不下你，爱情啊，此生一次就足矣～
+               <br><br>*每次和你说话都想说，我想你！
+               每次都怕你觉得我是无话可说才说想你。
+               每次想你都想和你说话却不一定能如愿啊～
+               <br><br>*宝贝，听到你说一次想我了，相当于我中了500万大奖一样兴奋，心情好好～
+               <br><br>*“想你想你想你想你，实在想的不行就打会游戏吧！”
+               <br>“那你和游戏过吧！”
+               <br>“才不要，心情不好会打游戏，再怎么心情不好都不舍的哪怕骂你，更何况动手呢！”
+               <br><br>*好晚了，还是睡不着，想想丫头就可以睡着了吧！
+               <br>……
+               <br>……
+               <br>……
+               <br>好吧，还是睡不着！
+               <br>这不怪我，谁让我每次想你都精神百倍呢！
+               <br>……
+               <br>那就再想你一小下，就一小下～
+               <br><br>*累死本宝宝了，不知道丫头这会在干嘛呢，算了，还是觉觉吧，宝宝肯定都睡了，虽然好想吵她起来让她给我发个小脾气什么的。
+               <br>……
+               <br>还是算了吧，宝宝本来就睡眠质量不好，就别欺负宝宝了，么么哒！安安～
+               <br><br>*“我想按着你打你屁屁！”
+               <br>“来呀来呀，求被打，求被打！”
+               <br>“……”
+               <br>其实我只想抱你在怀里，轻轻的爱抚你！
+               <br><br>*越来越没激情了，都怪我，归于平淡的原因是因为成长了，所以不冲动了，之后，激情都被安逸所取代了！
+               <br><br>*趁着宝宝不注意，偷偷上去就是一个吻，好香啊～
+               <br>……
+               <br>然后，梦就醒了！
+               <br><br>*思念，真是种让人欲罢不能的感情。
+               <br><br>*每当夜深人静的时候，思念忍住不就泛滥的一塌糊涂。回忆一次，就幸福一次；回忆一次，就心疼一次！
+               <br><br>*忍不住想用一辈子去呵护你，求求你给我个机会～
+               <br><br>*笨丫头，当你心情不好的时候，我怎么可能和你吵架？最多给你个无伤大雅的发泄借口！
+               <br>但丫头啊，你生气时候六亲不认的样子伤老公很深的你知不知道？笑着让你去觉觉，转眼就忍不住颤抖的身体骗不了自己……
+               <br><br>*好几天看不见你的模样，才一接视频，浓浓的暖流瞬间裹住了我，幸福大抵如是吧！
+               <br><br>*多情自古伤离别，我们的感情路一路坎坷不外乎如是，未有离别，何来相见？
+               <br><br>*现实的生活，让宝宝累了吧？我想努力为你撑起一片蓝天，无奈自己不够好，能力还不足以让你无所忧虑，可是亲爱的别怕，虽然现在苦点，总有一天，我会让你自由自在，做你想做的，看到你想看的，让幸福把你淹没！
+               <br><br>*宝贝，对我们的未来，你要有信心，因为我不会让你离开我，现在我每一分拼搏，都是为了让你平稳的走向我要的美好，我们，会美满，会幸福～
+               <br><br>*昨晚又失眠了，丫头对我说，她还不想回去。我知道她是在努力给我争取时间，可我现在却如此没用，怎样才能让丫头过自己想要的生活？我该怎么做？还缺时间，但怎么忍心让宝贝一直这么狼狈？怎么办？谁来告诉我！！！
+               <br><br>*傻瓜宝，当你听到来自我的想念的时候，我已经想了你好多好多遍了！
+               <br>虽然每次想你的时候都会想起你说的那句玩笑话，想你了就别告诉你说了又有什么用？但还是忍不住，谁让我们的距离跨过了半个中国，而且从一开始就处于异地的范畴，越来越远，越来越远……
+               <br><br>*每次当我想你的时候，我就觉得我们在一起一天了，到现在为止，我的感觉里，我和你已经有了百世情缘了！
+               <br><br>*累死宝宝了，16个小时的班真难上，还好我有动力，算算已经给人顶了3个班了，再给人顶一个班就可以去看宝宝了，想想浑身就充满了力气，还有谁？还有谁？还有谁要顶班？都放马过来！
+               <br><br>*我那乖乖的坏坏的丫头，
+               <br>是我心上最甜蜜的伤口，
+               <br>你是对的，
+               <br>你是错的，
+               <br>反正规矩都是你定的……
+               <br><br>*温度零下二十多度，北风7级，距离地面25米！突然就想抱着宝贝，是因为太冷了么？
+               <br>……
+               <br>……
+               <br>……
+               <br>应该是，快TM冻死了，想在临死前抱抱宝宝，有没有很恐怖？
+               <br><br>*00:25，刚回到宿舍，拖班的人都该被灭九族，TMD，我是连班的啊，十六个小时就吃了一桶泡面，回来这么大雪，这么大风，饭店关门，真是悲剧的一天，回来还得吃泡面，真坑！
+               <br>……
+               <br>还好，终于把要顶的班顶完了，再过1……2……3……天就可以去找宝贝了！真好，我要睡觉，我要吃东西，我要喝水，我要抱暖宝，我还要么么宝贝～
+               <br><br>*吃个手抓饼，瞬间就想起臭宝在我跟前的时候总是揭起那脆脆的干皮咬的嘎吱嘎吱，要多点生菜，好像吃菜夹饼一样，臭宝贝，你来吃呀～
+               <br><br>*没有人能抵得过岁月的蹉跎，也没有人会把你当成自己一样一直关注着，只是，心里还是有些压抑，大概是太矫情了吧？
+               <br>笨丫头，我能不能告诉你，你人不在我身边我还能忍受，若是连心的陪伴也不满足我的话，我该如何自处？
+               <br><br>*我说不出来为什么爱你， 但我知道， 你就是我不爱别人的理由。
+               <br><br>*你就躺在我旁边，为什么我感觉到你离我好远，好远好远～
+               <br><br>*这么大个男人，总是哭哭啼啼的，真恶心，我承认，我也恶心到我自己了！所以，我不怪你……虽然，我听到你说出这个词比我自己想像出来要难受一万倍不止！
+               <br><br>*给你最好的包容，你觉得我太软弱，亲爱的傻瓜，你可知道你是有多么强势？我若再强势一次，估摸着我们的爱情应该会破碎吧……
+               <br><br>*死娃，这么自信的我生你气不过几分钟，那你觉得我会这样多久呢？每次气我，意外不算，还经常故意气我，是觉得我长得像受气包么？嗯？？？
+               <br><br>*现在的你怎么会如此暴躁，一句:我不想跟你说话！告诉了我那么多那么多的信息，心好累，真的……
+               <br><br>*好讨厌你，期待了那么久的美好转瞬成泡影，不是不体谅你，可还是心塞塞的，好郁闷～
+           </div>
+        </div>
+        <div data-role="footer" data-position="fixed" class="ui-btn"><a href="#pagetwo" data-role="button" data-transition="flow" data-direction="reverse">返回</a></div>
+
+    </div>
+    <div id="QQ" data-theme="n" data-role="page">
+        <div data-role="header"><H2>QQ号码</H2></div>
+        <div data-role="content">
+            <ul data-role="listview">
+                <li>626990784</li>
+                <li>1601721472</li>
+                <li>1446387707</li>
+                <li>1148076170</li>
+            </ul>
+        </div>
+        <div data-role="footer" class="ui-btn"><a href="#pagetwo" data-role="button" data-icon="back" data-transition="pop" data-direction="reverse">返回</a></div>
+    </div>
+    <div id="Wechat" data-theme="n" data-role="page">
+        <div data-role="header"><H2>微信号</H2></div>
+        <div data-role="content">
+            <ul data-role="listview">
+                <li>never0803back</li>
+                <li>StarilerSad</li>
+                <li>cyd12345x67890cyd</li>
+            </ul>
+        </div>
+        <div data-role="footer" class="ui-btn"><a href="#pagetwo" data-role="button" data-icon="back" data-transition="pop" data-direction="reverse">返回</a></div>
+    </div>
+    <div id="PhoneNumber" data-theme="n" data-role="page">
+        <div data-role="header"><H2>手机号</H2></div>
+        <div data-role="content">
+            <ul data-role="listview">
+                <li>18329798514</li>
+                <li>15353095573</li>
+            </ul>
+        </div>
+        <div data-role="footer" class="ui-btn"><a href="#pagetwo" data-role="button" data-icon="back" data-transition="pop" data-direction="reverse">返回</a></div>
+    </div>
+    <div id="Email" data-theme="n" data-role="page">
+        <div data-role="header"><H2>邮箱</H2></div>
+        <div data-role="content">
+            <ul data-role="listview">
+                <li>18329798514@139.com</li>
+                <li>626990784@qq.com</li>
+                <li>zx2317070@163.com</li>
+            </ul>
+        </div>
+        <div data-role="footer" class="ui-btn"><a href="#pagetwo" data-role="button" data-icon="back" data-transition="pop" data-direction="reverse">返回</a></div>
+    </div>
+    <div id="Other" data-theme="n" data-role="page">
+        <div data-role="header"><H2>其他联系方式</H2></div>
+        <div data-role="content">
+            <ul data-role="listview">
+                <li>陕西省渭南市临渭区阳郭镇屯张村</li>
+                <li>陕西省西安市碑林区吉祥村101号</li>
+                <li>紧急联系人：李鹏-15591426035</li>
+            </ul>
+        </div>
+        <div data-role="footer" class="ui-btn"><a href="#pagetwo" data-role="button" data-icon="back" data-transition="pop" data-direction="reverse">返回</a></div>
+    </div>
+    <div id="pagethree" data-theme="d" data-role="page">
+        <div data-role="header">
+            <a href="#pagetwo">返回上一页</a>
+            <h2>飞到哪了</h2>
+            <a href="#">接着飞</a>
+        </div>
+        <div data-role="content">
+            <div class="content">
+                <div>
+                    <div><img src=""></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" class="ui-btn">
+           你想去哪？
+                    <a href="#">天上</a>
+                    <a href="#">水里</a>
+                    <a href="#">地里</a>
+        </div>
+    </div>
+</body>
+</html>
