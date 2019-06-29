@@ -3,13 +3,8 @@ import store from './store'
 import { Message } from 'element-ui'
 import NProgress from 'nprogress' // progress bar
 import 'nprogress/nprogress.css' // progress bar style
-import { getToken, setToken } from '@/utils/auth' // get token from cookie
+import { getToken } from '@/utils/auth' // get token from cookie
 import getPageTitle from '@/utils/get-page-title'
-import getKey from '@/utils/url-search'
-
-/**路由跳转中断请求 */
-// import axios from 'axios'
-// import { clearRequest } from '@/utils/request'
 
 NProgress.configure({ showSpinner: false }) // NProgress Configuration
 
@@ -25,13 +20,6 @@ router.beforeEach(async(to, from, next) => {
   // determine whether the user has logged in
   const hasToken = getToken()
 
-  //获取url传入的accessToken
-  const hasCode = getKey.getUrlKey('accessToken')
-
-  if (hasCode) {
-    await store.dispatch('user/login')
-  }
-
   if (hasToken) {
     if (to.path === '/login') {
       // if is logged in, redirect to the home page
@@ -41,13 +29,6 @@ router.beforeEach(async(to, from, next) => {
       // determine whether the user has obtained his permission roles through getInfo
       const hasRoles = store.getters.roles && store.getters.roles.length > 0
       if (hasRoles) {
-
-        // generate accessible routes map based on roles
-        const accessRoutes = await store.dispatch('permission/generateRoutes', ['admin'])
-
-        // dynamically add accessible routes
-        router.addRoutes(accessRoutes)
-
         next()
       } else {
         try {
@@ -84,14 +65,7 @@ router.beforeEach(async(to, from, next) => {
       next(`/login?redirect=${to.path}`)
       NProgress.done()
     }
-
   }
-
-
-  // 切换路由时清空上个路由未完成的所有请求
-  // const cancelToken = axios.CancelToken
-  // clearRequest.source.cancel && clearRequest.source.cancel()
-  // clearRequest.source = cancelToken.source()
 })
 
 router.afterEach(() => {
